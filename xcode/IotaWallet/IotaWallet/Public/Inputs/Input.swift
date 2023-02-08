@@ -7,7 +7,9 @@
 
 import Foundation
 
+/// Transaction Input
 struct TransactionInput: Codable {
+    /// Transaction type
     var type: Int?
     var transactionId: String?
     var transactionOutputIndex: Int?

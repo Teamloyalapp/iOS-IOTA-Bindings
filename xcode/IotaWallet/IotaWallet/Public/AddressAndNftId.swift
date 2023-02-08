@@ -21,6 +21,7 @@ class AddressAndNftId: Codable {
 }
 
 class NftId: Codable {
+    /// Nft id string
     var id: String
     
     init(id: String) {

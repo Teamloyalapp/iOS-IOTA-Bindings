@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Transaction essence protocol
 protocol TransactionEssence: Codable {
     var type: Int? { get set }
 }

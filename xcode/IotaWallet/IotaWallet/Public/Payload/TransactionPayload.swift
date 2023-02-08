@@ -7,9 +7,11 @@
 
 import Foundation
 
-// MARK: - TransactionPayload
+// MARK: - Transaction payload
 public struct TransactionPayload: Payload {
+    /// Type
     var type: Int?
+    /// 
     var essence: RegularTransactionEssence?
     var unlocks: [Unlock]?
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Payload protocol
 protocol Payload: Codable {
     var type: Int? { get set }
 }
