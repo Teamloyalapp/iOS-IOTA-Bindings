@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75114B4B297323FD002A9336 /* IOTAAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B4A297323FD002A9336 /* IOTAAccountManager.swift */; };
+		75114B4D2973277D002A9336 /* WalletEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B4C2973277D002A9336 /* WalletEventsManager.swift */; };
+		75114B4F29732900002A9336 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B4E29732900002A9336 /* Extensions.swift */; };
+		75114B5129732A1F002A9336 /* PrivateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B5029732A1F002A9336 /* PrivateModels.swift */; };
+		75114B5329732A77002A9336 /* IOTAAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B5229732A77002A9336 /* IOTAAccount.swift */; };
+		75114B5529732AD5002A9336 /* IOTAAccountAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B5429732AD5002A9336 /* IOTAAccountAsync.swift */; };
+		75114B5729732EBA002A9336 /* IOTAModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B5629732EBA002A9336 /* IOTAModels.swift */; };
+		75114B5929732F0A002A9336 /* TransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B5829732F0A002A9336 /* TransferModel.swift */; };
+		75114B5B29732F36002A9336 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B5A29732F36002A9336 /* Units.swift */; };
+		75114B5D29732F9C002A9336 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B5C29732F9C002A9336 /* Utils.swift */; };
+		75114B5F297332C0002A9336 /* IOTAAccountManagerAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75114B5E297332C0002A9336 /* IOTAAccountManagerAsync.swift */; };
+		7575F0D62973DD7C004DAFD5 /* IOTAWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7575F0D52973DD7C004DAFD5 /* IOTAWallet.swift */; };
+		759E13B129940D530001CB7B /* AddressAndNftId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13B029940D530001CB7B /* AddressAndNftId.swift */; };
+		759E13C429940D7A0001CB7B /* TransactionEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13B429940D7A0001CB7B /* TransactionEssence.swift */; };
+		759E13C529940D7A0001CB7B /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13B529940D7A0001CB7B /* Transaction.swift */; };
+		759E13C629940D7A0001CB7B /* RegularTransactionEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13B629940D7A0001CB7B /* RegularTransactionEssence.swift */; };
+		759E13C929940D7A0001CB7B /* TransactionPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13BA29940D7A0001CB7B /* TransactionPayload.swift */; };
+		759E13CA29940D7A0001CB7B /* TaggedDataPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13BB29940D7A0001CB7B /* TaggedDataPayload.swift */; };
+		759E13CB29940D7A0001CB7B /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13BC29940D7A0001CB7B /* Payload.swift */; };
+		759E13CF29940D7A0001CB7B /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13C129940D7A0001CB7B /* Output.swift */; };
+		759E13D029940D7A0001CB7B /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E13C329940D7A0001CB7B /* Input.swift */; };
+		75A2BCA5293F8D15000A36F6 /* IOTAWalletInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A2BCA4293F8D15000A36F6 /* IOTAWalletInternal.xcframework */; };
+		75A2BCA6293F8D16000A36F6 /* IOTAWalletInternal.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75A2BCA4293F8D15000A36F6 /* IOTAWalletInternal.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		75FB6BAC2963E41300B7E149 /* SwiftExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C8430A27C989810042BF62 /* SwiftExtensions.swift */; };
+		7904C22027BBDF85001CB01B /* IotaWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7904C21527BBDF85001CB01B /* IotaWallet.framework */; };
+		7904C22627BBDF85001CB01B /* IotaWallet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7904C21827BBDF85001CB01B /* IotaWallet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7904C23227BBDFB2001CB01B /* Wallet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7904C22F27BBDFB2001CB01B /* Wallet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7904C23327BBDFB2001CB01B /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7904C23027BBDFB2001CB01B /* Wallet.m */; };
+		7904C23827BBDFD2001CB01B /* await.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7904C23627BBDFD2001CB01B /* await.swift */; };
+		7904C23927BBDFD2001CB01B /* callback.m in Sources */ = {isa = PBXBuildFile; fileRef = 7904C23727BBDFD2001CB01B /* callback.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7904C22127BBDF85001CB01B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7904C20C27BBDF85001CB01B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7904C21427BBDF85001CB01B;
+			remoteInfo = IotaWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		75A2BCA7293F8D16000A36F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				75A2BCA6293F8D16000A36F6 /* IOTAWalletInternal.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		75114B4A297323FD002A9336 /* IOTAAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOTAAccountManager.swift; sourceTree = "<group>"; };
+		75114B4C2973277D002A9336 /* WalletEventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletEventsManager.swift; sourceTree = "<group>"; };
+		75114B4E29732900002A9336 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		75114B5029732A1F002A9336 /* PrivateModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateModels.swift; sourceTree = "<group>"; };
+		75114B5229732A77002A9336 /* IOTAAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOTAAccount.swift; sourceTree = "<group>"; };
+		75114B5429732AD5002A9336 /* IOTAAccountAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOTAAccountAsync.swift; sourceTree = "<group>"; };
+		75114B5629732EBA002A9336 /* IOTAModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOTAModels.swift; sourceTree = "<group>"; };
+		75114B5829732F0A002A9336 /* TransferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferModel.swift; sourceTree = "<group>"; };
+		75114B5A29732F36002A9336 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		75114B5C29732F9C002A9336 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		75114B5E297332C0002A9336 /* IOTAAccountManagerAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOTAAccountManagerAsync.swift; sourceTree = "<group>"; };
+		7575F0D52973DD7C004DAFD5 /* IOTAWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOTAWallet.swift; sourceTree = "<group>"; };
+		759E13B029940D530001CB7B /* AddressAndNftId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressAndNftId.swift; sourceTree = "<group>"; };
+		759E13B429940D7A0001CB7B /* TransactionEssence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionEssence.swift; sourceTree = "<group>"; };
+		759E13B529940D7A0001CB7B /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		759E13B629940D7A0001CB7B /* RegularTransactionEssence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularTransactionEssence.swift; sourceTree = "<group>"; };
+		759E13BA29940D7A0001CB7B /* TransactionPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionPayload.swift; sourceTree = "<group>"; };
+		759E13BB29940D7A0001CB7B /* TaggedDataPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggedDataPayload.swift; sourceTree = "<group>"; };
+		759E13BC29940D7A0001CB7B /* Payload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
+		759E13C129940D7A0001CB7B /* Output.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		759E13C329940D7A0001CB7B /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		75A2BCA4293F8D15000A36F6 /* IOTAWalletInternal.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = IOTAWalletInternal.xcframework; sourceTree = "<group>"; };
+		7904C21527BBDF85001CB01B /* IotaWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IotaWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7904C21827BBDF85001CB01B /* IotaWallet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IotaWallet.h; sourceTree = "<group>"; };
+		7904C21F27BBDF85001CB01B /* IotaWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IotaWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7904C22F27BBDFB2001CB01B /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		7904C23027BBDFB2001CB01B /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
+		7904C23627BBDFD2001CB01B /* await.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = await.swift; sourceTree = "<group>"; };
+		7904C23727BBDFD2001CB01B /* callback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = callback.m; sourceTree = "<group>"; };
+		79C8430A27C989810042BF62 /* SwiftExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7904C21227BBDF85001CB01B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A2BCA5293F8D15000A36F6 /* IOTAWalletInternal.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7904C21C27BBDF85001CB01B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7904C22027BBDF85001CB01B /* IotaWallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		759E13B329940D7A0001CB7B /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				759E13B429940D7A0001CB7B /* TransactionEssence.swift */,
+				759E13B529940D7A0001CB7B /* Transaction.swift */,
+				759E13B629940D7A0001CB7B /* RegularTransactionEssence.swift */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		759E13B929940D7A0001CB7B /* Payload */ = {
+			isa = PBXGroup;
+			children = (
+				759E13BA29940D7A0001CB7B /* TransactionPayload.swift */,
+				759E13BB29940D7A0001CB7B /* TaggedDataPayload.swift */,
+				759E13BC29940D7A0001CB7B /* Payload.swift */,
+			);
+			path = Payload;
+			sourceTree = "<group>";
+		};
+		759E13C029940D7A0001CB7B /* Outputs */ = {
+			isa = PBXGroup;
+			children = (
+				759E13C129940D7A0001CB7B /* Output.swift */,
+			);
+			path = Outputs;
+			sourceTree = "<group>";
+		};
+		759E13C229940D7A0001CB7B /* Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				759E13C329940D7A0001CB7B /* Input.swift */,
+			);
+			path = Inputs;
+			sourceTree = "<group>";
+		};
+		75DC238429465FBD00769FA0 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				759E13C229940D7A0001CB7B /* Inputs */,
+				759E13C029940D7A0001CB7B /* Outputs */,
+				759E13B929940D7A0001CB7B /* Payload */,
+				759E13B329940D7A0001CB7B /* Transaction */,
+				759E13B029940D530001CB7B /* AddressAndNftId.swift */,
+				75114B4E29732900002A9336 /* Extensions.swift */,
+				75114B5029732A1F002A9336 /* PrivateModels.swift */,
+				75114B5829732F0A002A9336 /* TransferModel.swift */,
+				75114B5A29732F36002A9336 /* Units.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		7904C20B27BBDF85001CB01B = {
+			isa = PBXGroup;
+			children = (
+				7904C21727BBDF85001CB01B /* IotaWallet */,
+				7904C22327BBDF85001CB01B /* IotaWalletTests */,
+				7904C21627BBDF85001CB01B /* Products */,
+				7904C23A27BBE08D001CB01B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7904C21627BBDF85001CB01B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7904C21527BBDF85001CB01B /* IotaWallet.framework */,
+				7904C21F27BBDF85001CB01B /* IotaWalletTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7904C21727BBDF85001CB01B /* IotaWallet */ = {
+			isa = PBXGroup;
+			children = (
+				75DC238429465FBD00769FA0 /* Public */,
+				75114B5229732A77002A9336 /* IOTAAccount.swift */,
+				7575F0D52973DD7C004DAFD5 /* IOTAWallet.swift */,
+				75114B5429732AD5002A9336 /* IOTAAccountAsync.swift */,
+				75114B4A297323FD002A9336 /* IOTAAccountManager.swift */,
+				75114B5E297332C0002A9336 /* IOTAAccountManagerAsync.swift */,
+				75114B5629732EBA002A9336 /* IOTAModels.swift */,
+				75114B5C29732F9C002A9336 /* Utils.swift */,
+				75114B4C2973277D002A9336 /* WalletEventsManager.swift */,
+				7904C21827BBDF85001CB01B /* IotaWallet.h */,
+				7904C22F27BBDFB2001CB01B /* Wallet.h */,
+				7904C23027BBDFB2001CB01B /* Wallet.m */,
+			);
+			path = IotaWallet;
+			sourceTree = "<group>";
+		};
+		7904C22327BBDF85001CB01B /* IotaWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				79C8430A27C989810042BF62 /* SwiftExtensions.swift */,
+				7904C23627BBDFD2001CB01B /* await.swift */,
+				7904C23727BBDFD2001CB01B /* callback.m */,
+			);
+			path = IotaWalletTests;
+			sourceTree = "<group>";
+		};
+		7904C23A27BBE08D001CB01B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75A2BCA4293F8D15000A36F6 /* IOTAWalletInternal.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7904C21027BBDF85001CB01B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7904C22627BBDF85001CB01B /* IotaWallet.h in Headers */,
+				7904C23227BBDFB2001CB01B /* Wallet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7904C21427BBDF85001CB01B /* IotaWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7904C22927BBDF85001CB01B /* Build configuration list for PBXNativeTarget "IotaWallet" */;
+			buildPhases = (
+				7904C21027BBDF85001CB01B /* Headers */,
+				7904C21127BBDF85001CB01B /* Sources */,
+				7904C21227BBDF85001CB01B /* Frameworks */,
+				7904C21327BBDF85001CB01B /* Resources */,
+				75A2BCA7293F8D16000A36F6 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IotaWallet;
+			productName = IotaWallet;
+			productReference = 7904C21527BBDF85001CB01B /* IotaWallet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7904C21E27BBDF85001CB01B /* IotaWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7904C22C27BBDF85001CB01B /* Build configuration list for PBXNativeTarget "IotaWalletTests" */;
+			buildPhases = (
+				7904C21B27BBDF85001CB01B /* Sources */,
+				7904C21C27BBDF85001CB01B /* Frameworks */,
+				7904C21D27BBDF85001CB01B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7904C22227BBDF85001CB01B /* PBXTargetDependency */,
+			);
+			name = IotaWalletTests;
+			productName = IotaWalletTests;
+			productReference = 7904C21F27BBDF85001CB01B /* IotaWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7904C20C27BBDF85001CB01B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					7904C21427BBDF85001CB01B = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+					};
+					7904C21E27BBDF85001CB01B = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+					};
+				};
+			};
+			buildConfigurationList = 7904C20F27BBDF85001CB01B /* Build configuration list for PBXProject "IotaWallet" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7904C20B27BBDF85001CB01B;
+			productRefGroup = 7904C21627BBDF85001CB01B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7904C21427BBDF85001CB01B /* IotaWallet */,
+				7904C21E27BBDF85001CB01B /* IotaWalletTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7904C21327BBDF85001CB01B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7904C21D27BBDF85001CB01B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7904C21127BBDF85001CB01B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7904C23327BBDFB2001CB01B /* Wallet.m in Sources */,
+				7575F0D62973DD7C004DAFD5 /* IOTAWallet.swift in Sources */,
+				759E13C529940D7A0001CB7B /* Transaction.swift in Sources */,
+				759E13C929940D7A0001CB7B /* TransactionPayload.swift in Sources */,
+				75114B5B29732F36002A9336 /* Units.swift in Sources */,
+				75114B5329732A77002A9336 /* IOTAAccount.swift in Sources */,
+				759E13C629940D7A0001CB7B /* RegularTransactionEssence.swift in Sources */,
+				75114B4F29732900002A9336 /* Extensions.swift in Sources */,
+				759E13C429940D7A0001CB7B /* TransactionEssence.swift in Sources */,
+				759E13CF29940D7A0001CB7B /* Output.swift in Sources */,
+				75114B5F297332C0002A9336 /* IOTAAccountManagerAsync.swift in Sources */,
+				75114B5929732F0A002A9336 /* TransferModel.swift in Sources */,
+				759E13D029940D7A0001CB7B /* Input.swift in Sources */,
+				75114B4D2973277D002A9336 /* WalletEventsManager.swift in Sources */,
+				759E13B129940D530001CB7B /* AddressAndNftId.swift in Sources */,
+				75114B5129732A1F002A9336 /* PrivateModels.swift in Sources */,
+				75114B5729732EBA002A9336 /* IOTAModels.swift in Sources */,
+				75114B5529732AD5002A9336 /* IOTAAccountAsync.swift in Sources */,
+				759E13CB29940D7A0001CB7B /* Payload.swift in Sources */,
+				75114B4B297323FD002A9336 /* IOTAAccountManager.swift in Sources */,
+				759E13CA29940D7A0001CB7B /* TaggedDataPayload.swift in Sources */,
+				75114B5D29732F9C002A9336 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7904C21B27BBDF85001CB01B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7904C23927BBDFD2001CB01B /* callback.m in Sources */,
+				7904C23827BBDFD2001CB01B /* await.swift in Sources */,
+				75FB6BAC2963E41300B7E149 /* SwiftExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7904C22227BBDF85001CB01B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7904C21427BBDF85001CB01B /* IotaWallet */;
+			targetProxy = 7904C22127BBDF85001CB01B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7904C22727BBDF85001CB01B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lc++";
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7904C22827BBDF85001CB01B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-lc++";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7904C22A27BBDF85001CB01B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/iota_wallet";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/iota_wallet";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.iota.IotaWallet;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7904C22B27BBDF85001CB01B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/iota_wallet";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/iota_wallet";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.iota.IotaWallet;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		7904C22D27BBDF85001CB01B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KZHF5XBK9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iota.IotaWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7904C22E27BBDF85001CB01B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2KZHF5XBK9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iota.IotaWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7904C20F27BBDF85001CB01B /* Build configuration list for PBXProject "IotaWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7904C22727BBDF85001CB01B /* Debug */,
+				7904C22827BBDF85001CB01B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7904C22927BBDF85001CB01B /* Build configuration list for PBXNativeTarget "IotaWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7904C22A27BBDF85001CB01B /* Debug */,
+				7904C22B27BBDF85001CB01B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7904C22C27BBDF85001CB01B /* Build configuration list for PBXNativeTarget "IotaWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7904C22D27BBDF85001CB01B /* Debug */,
+				7904C22E27BBDF85001CB01B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7904C20C27BBDF85001CB01B /* Project object */;
+}
