@@ -18,11 +18,11 @@ We recommend you update Rust to the latest stable version [`rustup update stable
 
 `cmake` and `openssl` can be installed with `Homebrew`:
 
-```
+``` console
 brew install cmake openssl@1.1
 ```
 The IOTA Wallet Library source code for successful build is required. You can put it in a separate folder. Clone the latest version from github:
-```
+``` console
 git clone https://github.com/iotaledger/wallet.rs.git
 ```
 
@@ -43,7 +43,7 @@ Add compiled library to the project.
 ## Initialisation
 
 Init Stronghold Secret Manager:
-```
+``` Swift
 let manager = StrongholdSecretManager(
 	Stronghold: StrongholdSecretOptions(
 		password: …,
@@ -55,12 +55,12 @@ let manager = StrongholdSecretManager(
 
 Init IOTAWallet object:
 
-```
+``` Swift
 let wallet = IOTAWallet(storagePath: …, backupPath: …, secretManager: manager, coinType: .shimmer, nodeUrl: “https://api.shimmer.network”)
 ```
 
 Create IOTA Wallet if it doesn’t exist:
-```
+``` Swift
 wallet.createIOTAWallet(alias: …, onResult: { result in
                 switch result {
                 case .success(_):
@@ -80,7 +80,7 @@ wallet.restoreBackup(alias: …, onResult: { result in
                 })
 
 Get Account Addresses:
-```
+``` Swift
 wallet.getAccountAddress(alias: …, onResult: { result in
                 switch result {
                 case .success(let data):
@@ -95,7 +95,7 @@ wallet.getAccountAddress(alias: …, onResult: { result in
 ```
 
 Get Account NFT IDs list:
-```
+``` Swift
 wallet.getAccountListNftsIds(alias: …, onResult: { result in
                 switch result {
                 case .success(let data):
@@ -110,7 +110,7 @@ wallet.getAccountListNftsIds(alias: …, onResult: { result in
 ```
 
 Send NFT given by id to a specific receiver's address:
-```
+``` Swift
 wallet.sendNFT(alias: …, address: …, nftId: …, onResult: { result in
                 switch result {
                 case .success(let data):
