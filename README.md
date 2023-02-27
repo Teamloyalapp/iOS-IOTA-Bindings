@@ -75,9 +75,11 @@ wallet.createIOTAWallet(alias: …, onResult: { result in
 ```
 
 Otherwise, restore the wallet from the backup:
+```
 wallet.restoreBackup(alias: …, onResult: { result in
-					// handle result
-                })
+	// handle result
+})
+```
 
 Get the list of account addresses:
 ```
