@@ -2,7 +2,7 @@
 
 IOS IOTA Swift binding is a wrapper [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) and consists of 2 parts. The first part is written in Rust and includes the main methods for interacting with the [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) - `iota_initialize`, `iota_destroy`, `iota_send_message`, `iota_listen`, `iota_init_logger`.
 The second part of the library is written in Objective-C and Swift. To interact with native part, similar methods are used in the library. Json message and callback are passed as parameters to receive a response from the native part of the library. 
-To simplify the usage you can use IOTAWallet utility class, which contains all the necessary methods written in the Swift for simple work with the IOTA wallet.
+To simplify the usage you can use the IOTAWallet utility class, which contains all the necessary methods written in Swift for a simplyfied workflow with the IOTA wallet.
 
 # Documentation:
 
@@ -21,18 +21,18 @@ We recommend you update Rust to the latest stable version [`rustup update stable
 ```
 brew install cmake openssl@1.1
 ```
-IOTA Wallet Library source code for successful build is required. You can put it in a separate folder. Check the latest version from github:
+The IOTA Wallet Library source code for successful build is required. You can put it in a separate folder. Clone the latest version from github:
 ```
 git clone https://github.com/iotaledger/wallet.rs.git
 ```
 
 ## Compile native part of the library
-Open `Cargo.toml` file in the root of the project and replace iota-wallet path under dependencies section to your own path where [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) source code is.
+Open the `Cargo.toml` file in the root of the project and replace iota-wallet path under dependencies section to your own path where the [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) source code is.
 
-Build project using `make_universal_framework.sh` script.
+Build the project using `make_universal_framework.sh` script.
 
 ## Compile swift part of the library
-Copy IOTAWalletInternal.xframework from ./target/universal folder to ./xcode/IotaWallet folder
+Copy IOTAWalletInternal.xframework from the ./target/universal folder to ./xcode/IotaWallet
 Open Xcode project under Xcode folder and build the project.
 Use compiled library in your own project.
 
@@ -94,7 +94,7 @@ wallet.getAccountAddress(alias: …, onResult: { result in
             })
 ```
 
-Get Account NFT Ids list:
+Get Account NFT IDs list:
 ```
 wallet.getAccountListNftsIds(alias: …, onResult: { result in
                 switch result {
