@@ -86,7 +86,7 @@ Get the list of account addresses:
 wallet.getAccountAddress(alias: …, onResult: { result in
                 switch result {
                 case .success(let data):
-                    		// data contain account address
+                    		// data contains account address
                     } error: { error, message in
                         print(error)
                     }
@@ -101,7 +101,7 @@ Get the list of account NFT IDs:
 wallet.getAccountListNftsIds(alias: …, onResult: { result in
                 switch result {
                 case .success(let data):
-                    		// data contain NFT ids list
+                    		// data contains NFT ids list
                     } error: { error, message in
                         print(error)
                     }
@@ -116,7 +116,7 @@ Send the NFT specified by the ID to a specific receiver's address:
 wallet.sendNFT(alias: …, address: …, nftId: …, onResult: { result in
                 switch result {
                 case .success(let data):
-                    		// data contain NFT ids list
+                    		// data contains NFT ids list
                     } error: { error, message in
                         print(error)
                     }
