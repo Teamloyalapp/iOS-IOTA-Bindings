@@ -1,7 +1,7 @@
 # IOTA Wallet Library - Swift binding
 
-IOS IOTA Swift binding is a wrapper [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) and consists of 2 parts. The first part is written in Rust and includes the main methods for interacting with the [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) - `iota_initialize`, `iota_destroy`, `iota_send_message`, `iota_listen`, `iota_init_logger`.
-The second part of the library is written in Objective-C and Swift. To interact with native part, similar methods are used in the library. Json message and callback are passed as parameters to receive a response from the native part of the library. 
+iOS IOTA Swift binding is a wrapper [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) and consists of 2 parts. The first part is written in Rust and includes the main methods for interacting with the [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) - `iota_initialize`, `iota_destroy`, `iota_send_message`, `iota_listen`, `iota_init_logger`.
+The second part of the library is written in Objective-C and Swift. To interact with native part, similar methods are used in the library. JSON message and callback are passed as parameters to receive a response from the native part of the library. 
 To simplify the usage you can use the IOTAWallet utility class, which contains all the necessary methods written in Swift for a simplyfied workflow with the IOTA wallet.
 
 # Documentation:
