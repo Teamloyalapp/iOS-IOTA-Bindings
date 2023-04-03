@@ -109,9 +109,9 @@ public class IOTAAccountManager {
         }
     }
     
-    /// Gets the current Stronghold status.
+    /// Checks if the Stronghold password is available.
     /// - Parameter onResult: The result or error
-    public func strongholdStatus(onResult: ((Result<StrongholdStatus, Error>) -> Void)? = nil) {
+    public func isStrongholdPasswordAvailable(onResult: ((Result<StrongholdStatus, Error>) -> Void)? = nil) {
         walletManager?.sendCommand(id: "IsStrongholdPasswordAvailable",
                                    cmd: "isStrongholdPasswordAvailable",
                                    payload: nil) { result, error in
