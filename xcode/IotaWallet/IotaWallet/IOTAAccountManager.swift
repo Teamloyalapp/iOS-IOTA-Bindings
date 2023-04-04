@@ -167,6 +167,22 @@ public class IOTAAccountManager {
         }
     }
     
+    /// Removes the latest account (account with the largest account index).
+    /// - Parameter onResult: The result or error
+    public func removeLatestAccount(onResult: @escaping (Result<String, Error>) -> Void) {
+        walletManager?.sendCommand(id: "RemoveLatestAccount",
+                                   cmd: "removeLatestAccount",
+                                   payload: nil) { result, error in
+            if let response = WalletResponse<String>.decode(result)?.type {
+                onResult(.success(response))
+            } else if let error = error {
+                onResult(.failure(error))
+            } else {
+                onResult(.failure(IOTAResponseError.decode(from: result ?? "")))
+            }
+        }
+    }
+    
     /// Generates a new mnemonic.
     /// - Parameter onResult: The generated mnemonic or error
     public func generateMnemonic(onResult: @escaping (Result<String, Error>) -> Void) {
