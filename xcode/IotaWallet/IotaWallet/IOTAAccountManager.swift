@@ -239,6 +239,29 @@ public class IOTAAccountManager {
         }
     }
     
+    /// Get the status of the Ledger Nano.
+    /// - Parameters:
+    ///   - onResult: Te status of the Ledger Nano
+    public func recoverAccounts(accountStartIndex: Int, accountGapLimit: Int, addressGapLimit: Int, syncOptions: SyncOptions?, onResult: ((Result<[Account], Error>) -> Void)? = nil) { 
+        let payload: [String : Any?] = [
+            "accountStartIndex": accountStartIndex,
+            "accountGapLimit": accountGapLimit,
+            "addressGapLimit": addressGapLimit,
+            "syncOptions": syncOptions
+        ]
+        walletManager?.sendCommand(id: "RecoverAccounts",
+                                   cmd: "recoverAccounts",
+                                   payload: payload) { result, error in
+            if let status = WalletResponse<[Account]>.decode(result)?.payload {
+                onResult?(.success(status))
+            } else if let error = error {
+                onResult?(.failure(error))
+            } else {
+                onResult?(.failure(IOTAResponseError.decode(from: result ?? "")))
+            }
+        }
+    }
+    
     /// Creates a new account.
     /// - Parameters:
     ///   - alias: The provided alias for the account
