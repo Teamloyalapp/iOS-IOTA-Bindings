@@ -295,11 +295,6 @@ struct IOTABalance: Codable {
     let potentiallyLockedOutputs: PotentiallyLockedOutputs
 }
 
-public enum CoinType: Int {
-    case iota = 4218
-    case shimmer = 4219
-}
-
 // MARK: - BaseCoin
 struct BaseCoin: Codable {
     let total, available: String
@@ -307,9 +302,4 @@ struct BaseCoin: Codable {
 
 // MARK: - PotentiallyLockedOutputs
 struct PotentiallyLockedOutputs: Codable {
-}
-
-// MARK: - RequiredStorageDeposit
-struct RequiredStorageDeposit: Codable {
-    let alias, basic, foundry, nft: String
 }

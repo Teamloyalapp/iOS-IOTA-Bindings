@@ -71,42 +71,6 @@ public struct ClientOption: Codable {
     }
 }
 
-public protocol SecretManager: Codable {}
-
-public struct MnemonicSecretManager: SecretManager, Codable {
-    let Mnemonic: String
-    
-    var json: String {
-        let json = try! JSONEncoder().encode(self)
-        return String(data: json, encoding: .utf8)!
-    }
-}
-
-public struct StrongholdSecretOptions: Codable {
-    public let password: String
-    public let timeout: Int?
-    public let snapshotPath: String
-    
-    public init(password: String, timeout: Int? = nil, snapshotPath: String) {
-        self.password = password
-        self.timeout = timeout
-        self.snapshotPath = snapshotPath
-    }
-}
-
-public struct StrongholdSecretManager: SecretManager, Codable {
-    public let Stronghold: StrongholdSecretOptions
-    
-    public init(Stronghold: StrongholdSecretOptions) {
-        self.Stronghold = Stronghold
-    }
-
-    public var json: String {
-        let json = try! JSONEncoder().encode(self)
-        return String(data: json, encoding: .utf8)!
-    }
-}
-
 func managerOptions(nodeUrl: String = "https://localhost", mnemonicSecretManager: MnemonicSecretManager, storagePath: String, coinType: Int, apiTimeoutInSeconds: Int = 20) -> ManagerOptions {
     let secretManager = mnemonicSecretManager
     let clientOptions = ClientOption(
@@ -118,7 +82,6 @@ func managerOptions(nodeUrl: String = "https://localhost", mnemonicSecretManager
     return ManagerOptions(storagePath: storagePath, clientOptions: clientOptions, secretManager: secretManager, coinType: coinType)
 }
 
-
 func managerOptions(nodeUrl: String = "https://localhost", strongholdSecretManager: StrongholdSecretManager ,storagePath: String, coinType: Int, apiTimeoutInSeconds: Int = 20) -> ManagerOptions {
     let secretManager = strongholdSecretManager
     let clientOptions = ClientOption(
@@ -129,7 +92,6 @@ func managerOptions(nodeUrl: String = "https://localhost", strongholdSecretManag
     
     return ManagerOptions(storagePath: storagePath, clientOptions: clientOptions, secretManager: secretManager, coinType: coinType)
 }
-
 
 class WalletEventsManager {
     fileprivate(set) var isRunning: Bool = false
