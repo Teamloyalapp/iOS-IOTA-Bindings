@@ -239,9 +239,7 @@ public class IOTAAccountManager {
         }
     }
     
-    /// Get the status of the Ledger Nano.
-    /// - Parameters:
-    ///   - onResult: Te status of the Ledger Nano
+    /// Find accounts with unspent outputs.
     public func recoverAccounts(accountStartIndex: Int, accountGapLimit: Int, addressGapLimit: Int, syncOptions: SyncOptions?, onResult: ((Result<[Account], Error>) -> Void)? = nil) { 
         let payload: [String : Any?] = [
             "accountStartIndex": accountStartIndex,
@@ -254,6 +252,22 @@ public class IOTAAccountManager {
                                    payload: payload) { result, error in
             if let status = WalletResponse<[Account]>.decode(result)?.payload {
                 onResult?(.success(status))
+            } else if let error = error {
+                onResult?(.failure(error))
+            } else {
+                onResult?(.failure(IOTAResponseError.decode(from: result ?? "")))
+            }
+        }
+    }
+    
+    /// Updates the client options for all accounts.
+    public func setClientOptions(options: ClientConfig, onResult: ((Result<Bool, Error>) -> Void)? = nil) {
+        walletManager?.sendCommand(id: "SetClientOptions",
+                                   cmd: "setClientOptions",
+                                   payload: options.dictionary) { result, error in
+            let isError = WalletResponse<Bool>.decode(result)?.isError ?? true
+            if !isError{
+                onResult?(.success(true))
             } else if let error = error {
                 onResult?(.failure(error))
             } else {

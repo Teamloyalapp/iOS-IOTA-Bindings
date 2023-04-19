@@ -1,6 +1,6 @@
 import Foundation
 
-struct ClientConfig: Codable {
+public struct ClientConfig: Codable {
     var primaryNode: String?
     var primaryPowNode: String?
     var nodes: [String]
@@ -23,23 +23,23 @@ struct ClientConfig: Codable {
     var powWorkerCount: Int?
 }
 
-struct NodeSyncInterval: Codable {
+public struct NodeSyncInterval: Codable {
     var secs: Int
     var nanos: Int
 }
 
-struct RentStructure: Codable {
+public struct RentStructure: Codable {
     var vByteCost: Int
     var vByteFactorKey: Int
     var vByteFactorData: Int
 }
 
-struct ApiTimeout: Codable {
+public struct ApiTimeout: Codable {
     var secs: Int
     var nanos: Int
 }
 
-struct RemotePowTimeout: Codable {
+public struct RemotePowTimeout: Codable {
     var secs: Int
     var nanos: Int
 }
