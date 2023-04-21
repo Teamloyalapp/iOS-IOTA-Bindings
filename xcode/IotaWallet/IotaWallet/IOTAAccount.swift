@@ -230,7 +230,30 @@ extension IOTAAccount {
                 } else {
                     onResult?(.failure(IOTAResponseError.decode(from: result ?? "")))
                 }
-            })
-        
+            }
+        )
+    }
+    
+    public func buildAliasOutput(options: BuildAliasOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+        self.accountManager?.walletManager?.sendCommand(
+            id: "BuildAliasOutput",
+            cmd: "callAccountMethod",
+            payload: [
+                "accountId": self.id,
+                "method": [
+                    "name": "buildAliasOutput",
+                    "data": options.dictionary ?? [:]
+                ]
+            ],
+            callback: { result, error in
+                if let output = WalletResponse<Output>.decode(result)?.payload {
+                    onResult?(.success(output))
+                } else if let error = error {
+                    onResult?(.failure(error))
+                } else {
+                    onResult?(.failure(IOTAResponseError.decode(from: result ?? "")))
+                }
+            }
+        )
     }
 }

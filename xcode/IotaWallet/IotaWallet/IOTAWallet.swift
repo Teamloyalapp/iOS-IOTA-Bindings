@@ -116,6 +116,25 @@ public class IOTAWallet {
         }
     }
     
+    public func buildAliasOutput(alias: String, options: BuildAliasOutput, onResult: ((Result<Output, Error>) -> Void)? = nil) {
+        syncAccount(alias: alias) { result in
+            switch result {
+            case .success(let account):
+                account.buildAliasOutput(options: options) { result in
+                    switch result {
+                    case .success(let data):
+                        onResult?(.success(data))
+                    case .failure(let error):
+                        onResult?(.failure(error))
+                    }
+                }
+            case .failure(let error):
+                onResult?(.failure(error))
+            }
+        }
+    }
+    
+    
     func syncAccount(alias: String, onResult: ((Result<IOTAAccount, Error>) -> Void)? = nil) {
         currentAccountManager?.getAccount(alias: alias) { result in
             switch result {

@@ -1,7 +1,7 @@
 import Foundation
 
 // MARK: - UnlockCondition
-class UnlockCondition: Codable {
+public class UnlockCondition: Codable {
     let type: Int?
     let address: Address?
 }

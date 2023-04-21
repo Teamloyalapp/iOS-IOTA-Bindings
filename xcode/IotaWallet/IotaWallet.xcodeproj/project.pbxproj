@@ -114,6 +114,8 @@
 		9A562A5029E921920055B54A /* TreasuryInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629F929E921920055B54A /* TreasuryInput.swift */; };
 		9A562A5129E921920055B54A /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629FA29E921920055B54A /* Input.swift */; };
 		9A562A5229E92BEF0055B54A /* IOTAWalletInternal.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A2BCA4293F8D15000A36F6 /* IOTAWalletInternal.xcframework */; };
+		9A785B9C29F2065E00A0D2BD /* NodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A785B9B29F2065E00A0D2BD /* NodeInfo.swift */; };
+		9A785BA229F2195E00A0D2BD /* BuildAliasOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A785BA129F2195E00A0D2BD /* BuildAliasOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +250,8 @@
 		9A5629F829E921920055B54A /* UtxoInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtxoInput.swift; sourceTree = "<group>"; };
 		9A5629F929E921920055B54A /* TreasuryInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreasuryInput.swift; sourceTree = "<group>"; };
 		9A5629FA29E921920055B54A /* Input.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		9A785B9B29F2065E00A0D2BD /* NodeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeInfo.swift; sourceTree = "<group>"; };
+		9A785BA129F2195E00A0D2BD /* BuildAliasOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildAliasOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +356,7 @@
 				9A5629A129E921920055B54A /* UnlockConditions */,
 				9A5629AB29E921920055B54A /* AccountAddress.swift */,
 				9A5629AC29E921920055B54A /* BaseCoinBalance.swift */,
+				9A785BA129F2195E00A0D2BD /* BuildAliasOutput.swift */,
 				9A5629AD29E921920055B54A /* MintTokenTransaction.swift */,
 				9A5629AE29E921920055B54A /* Features */,
 				9A5629B429E921920055B54A /* AddressWithUnspentOutputs.swift */,
@@ -364,6 +369,7 @@
 				9A5629BE29E921920055B54A /* Segment.swift */,
 				9A5629BF29E921920055B54A /* Ids */,
 				9A5629CD29E921920055B54A /* NodeAuth.swift */,
+				9A785B9B29F2065E00A0D2BD /* NodeInfo.swift */,
 				9A5629CE29E921920055B54A /* TransactionOptions.swift */,
 				9A5629CF29E921920055B54A /* TransactionEssence */,
 				9A5629D229E921920055B54A /* TransactionInput.swift */,
@@ -646,6 +652,7 @@
 				9A562A1E29E921920055B54A /* TokenId.swift in Sources */,
 				9A562A2E29E921920055B54A /* TransactionInput.swift in Sources */,
 				9A562A4F29E921920055B54A /* UtxoInput.swift in Sources */,
+				9A785B9C29F2065E00A0D2BD /* NodeInfo.swift in Sources */,
 				9A562A4129E921920055B54A /* StrongholdSecretOptions.swift in Sources */,
 				9A562A4B29E921920055B54A /* NftOutput.swift in Sources */,
 				9A562A0B29E921920055B54A /* TimelockUnlockCondition.swift in Sources */,
@@ -663,6 +670,7 @@
 				9A5629FE29E921920055B54A /* InputSigningData.swift in Sources */,
 				75114B5B29732F36002A9336 /* Units.swift in Sources */,
 				75114B5329732A77002A9336 /* IOTAAccount.swift in Sources */,
+				9A785BA229F2195E00A0D2BD /* BuildAliasOutput.swift in Sources */,
 				9A562A1029E921920055B54A /* TagFeature.swift in Sources */,
 				75114B4F29732900002A9336 /* Extensions.swift in Sources */,
 				9A562A2329E921920055B54A /* AccountAlias.swift in Sources */,

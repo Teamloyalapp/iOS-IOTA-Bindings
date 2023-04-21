@@ -1,5 +1,5 @@
 import Foundation
 
-class Feature: Codable {
+public class Feature: Codable {
     var type: Int?
 }

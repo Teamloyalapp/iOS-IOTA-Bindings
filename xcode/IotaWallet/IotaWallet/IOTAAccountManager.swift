@@ -276,6 +276,22 @@ public class IOTAAccountManager {
         }
     }
     
+    /// Get the node info
+    public func getNodeInfo(url: String, onResult: ((Result<NodeInfoResponse, Error>) -> Void)? = nil) {
+        let payload: [String : Any] = ["url": url]
+        walletManager?.sendCommand(id: "GetNodeInfo",
+                                   cmd: "getNodeInfo",
+                                   payload: payload) { result, error in
+            if let data = WalletResponse<NodeInfoResponse>.decode(result)?.payload {
+                onResult?(.success(data))
+            } else if let error = error {
+                onResult?(.failure(error))
+            } else {
+                onResult?(.failure(IOTAResponseError.decode(from: result ?? "")))
+            }
+        }
+    }
+    
     /// Creates a new account.
     /// - Parameters:
     ///   - alias: The provided alias for the account

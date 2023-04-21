@@ -149,59 +149,6 @@ public struct BalanceResponse: Decodable {
     let nfts: [String]
 }
 
-/// The Node Info response.
-public struct NodeInfoResponse: Decodable {
-    
-    /// The Node Info data.
-    public let nodeinfo: NodeInfo
-    
-    /// The URL associated to the node.
-    public let url: String
-}
-
-/// The Node Info response.
-public struct NodeInfo: Decodable {
-    
-    /// The name associated to the node.
-    public let name: String
-    
-    /// The current version of the node.
-    public let version: String
-    
-    /// Tells if the node is healty or not.
-    public let isHealthy: Bool
-    
-    /// The network ID.
-    public let networkId: String
-    
-    /// The current min Proof-Of-Work score.
-    public let minPoWScore: Int
-    
-    /// THe current value of messages per second.
-    public let messagesPerSecond: Double
-    
-    /// The current value of referenced messages per second.
-    public let referencedMessagesPerSecond: Double
-    
-    /// The current value of referenced rate.
-    public let referencedRate: Double
-    
-    /// The latest milestone timestamp.
-    public let latestMilestoneTimestamp: Int
-    
-    /// The current milestone index.
-    public let latestMilestoneIndex: Int
-    
-    /// The current confirmed milestone index.
-    public let confirmedMilestoneIndex: Int
-    
-    /// The current pruning index.
-    public let pruningIndex: Int
-    
-    /// The current features associated to the node.
-    public let features: [String]
-}
-
 /// The output kind associated to an `AddressOutput`.
 public enum OutputKind: String, Decodable {
     /// The `SignatureLockedSingle` output kind

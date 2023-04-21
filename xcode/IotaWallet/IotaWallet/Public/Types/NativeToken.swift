@@ -1,6 +1,6 @@
 import Foundation
 
-struct NativeToken: Codable {
+public struct NativeToken: Codable {
     // Identifier of the native token.
     var id: TokenId
     var amount: String?
