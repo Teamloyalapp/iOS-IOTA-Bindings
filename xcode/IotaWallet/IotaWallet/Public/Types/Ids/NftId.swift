@@ -1,6 +1,6 @@
 import Foundation
 
-class NftId: Codable {
+public class NftId: Codable {
     var id: String
     
     init(id: String) {

@@ -235,7 +235,7 @@ public struct TransferOptions {
     }
 }
 
-struct IOTABalance: Codable {
+public struct IOTABalance: Codable {
     let baseCoin: BaseCoin
     let requiredStorageDeposit: RequiredStorageDeposit
     let nativeTokens, nfts, aliases, foundries: [String]

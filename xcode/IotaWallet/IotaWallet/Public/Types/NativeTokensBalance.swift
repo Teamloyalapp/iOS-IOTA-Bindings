@@ -1,6 +1,6 @@
 import Foundation
 
-class NativeTokensBalance: Codable {
+public class NativeTokensBalance: Codable {
     /// Token id
     let tokenId: TokenId
     /// Token foundry immutable metadata

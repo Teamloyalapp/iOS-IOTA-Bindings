@@ -1,6 +1,6 @@
 import Foundation
 
-struct FilterOptions: Codable {
+public struct FilterOptions: Codable {
     /// Filter all outputs where the booked milestone index is below the specified timestamp
     var lowerBoundBookedTimestamp: Int?
     /// Filter all outputs where the booked milestone index is above the specified timestamp

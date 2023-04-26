@@ -1,5 +1,5 @@
 import Foundation
 
-class BlockId: AbstractId {
+public class BlockId: AbstractId {
     
 }

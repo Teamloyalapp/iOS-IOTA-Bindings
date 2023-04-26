@@ -1,6 +1,6 @@
 import Foundation
 
-struct BaseCoinBalance: Codable {
+public struct BaseCoinBalance: Codable {
     /// Total amount
     var total: Int
     /// Balance that can currently be spent

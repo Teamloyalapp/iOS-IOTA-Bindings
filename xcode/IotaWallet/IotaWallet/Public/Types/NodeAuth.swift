@@ -1,6 +1,6 @@
 import Foundation
 
-struct NodeAuth: Codable {
+public struct NodeAuth: Codable {
     /// JWT.
     var jwt: String
     /// Username and password.

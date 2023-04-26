@@ -1,5 +1,5 @@
 import Foundation
 
-class AliasId: AbstractId {
+public class AliasId: AbstractId {
     
 }

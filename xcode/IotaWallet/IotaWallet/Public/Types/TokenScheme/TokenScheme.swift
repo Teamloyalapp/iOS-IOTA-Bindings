@@ -1,5 +1,5 @@
 import Foundation
 
-protocol TokenScheme {
-    var type: Int? { get set }
+public struct TokenScheme: Codable {
+    var type: Int? 
 }

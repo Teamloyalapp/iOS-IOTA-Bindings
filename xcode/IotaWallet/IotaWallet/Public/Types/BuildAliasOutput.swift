@@ -1,7 +1,7 @@
 import Foundation
 
 // Build an AliasOutput.
-public struct BuildAliasOutput: Codable {
+public struct BuildAliasOutput: AccountMethod, Codable {
     var amount: String?
     var nativeTokens: [NativeToken]?
     var aliasId: String?

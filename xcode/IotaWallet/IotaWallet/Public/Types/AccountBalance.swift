@@ -1,6 +1,6 @@
 import Foundation
 
-struct AccountBalance: Codable {
+public struct AccountBalance: Codable {
     /// Total and available amount of the base coin
     var baseCoin: BaseCoinBalance?
     /// Current required storage deposit amount

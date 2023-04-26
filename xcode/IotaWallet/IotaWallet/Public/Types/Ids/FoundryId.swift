@@ -1,5 +1,5 @@
 import Foundation
 
-class FoundryId: AbstractId {
+public class FoundryId: AbstractId {
   
 }

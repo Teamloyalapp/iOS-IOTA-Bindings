@@ -109,9 +109,9 @@ public class IOTAAccountManager {
         }
     }
     
-    /// Checks if the Stronghold password is available.
+    /// Gets the current Stronghold status.
     /// - Parameter onResult: The result or error
-    public func isStrongholdPasswordAvailable(onResult: ((Result<StrongholdStatus, Error>) -> Void)? = nil) {
+    public func strongholdStatus(onResult: ((Result<StrongholdStatus, Error>) -> Void)? = nil) {
         walletManager?.sendCommand(id: "IsStrongholdPasswordAvailable",
                                    cmd: "isStrongholdPasswordAvailable",
                                    payload: nil) { result, error in
@@ -163,22 +163,6 @@ public class IOTAAccountManager {
                 onResult?(.failure(error))
             } else {
                 onResult?(.failure(IOTAResponseError.decode(from: result ?? "")))
-            }
-        }
-    }
-    
-    /// Removes the latest account (account with the largest account index).
-    /// - Parameter onResult: The result or error
-    public func removeLatestAccount(onResult: @escaping (Result<String, Error>) -> Void) {
-        walletManager?.sendCommand(id: "RemoveLatestAccount",
-                                   cmd: "removeLatestAccount",
-                                   payload: nil) { result, error in
-            if let response = WalletResponse<String>.decode(result)?.type {
-                onResult(.success(response))
-            } else if let error = error {
-                onResult(.failure(error))
-            } else {
-                onResult(.failure(IOTAResponseError.decode(from: result ?? "")))
             }
         }
     }
@@ -239,26 +223,6 @@ public class IOTAAccountManager {
         }
     }
     
-    /// Find accounts with unspent outputs.
-    public func recoverAccounts(accountStartIndex: Int, accountGapLimit: Int, addressGapLimit: Int, syncOptions: SyncOptions?, onResult: ((Result<[Account], Error>) -> Void)? = nil) { 
-        let payload: [String : Any?] = [
-            "accountStartIndex": accountStartIndex,
-            "accountGapLimit": accountGapLimit,
-            "addressGapLimit": addressGapLimit,
-            "syncOptions": syncOptions
-        ]
-        walletManager?.sendCommand(id: "RecoverAccounts",
-                                   cmd: "recoverAccounts",
-                                   payload: payload) { result, error in
-            if let status = WalletResponse<[Account]>.decode(result)?.payload {
-                onResult?(.success(status))
-            } else if let error = error {
-                onResult?(.failure(error))
-            } else {
-                onResult?(.failure(IOTAResponseError.decode(from: result ?? "")))
-            }
-        }
-    }
     
     /// Updates the client options for all accounts.
     public func setClientOptions(options: ClientConfig, onResult: ((Result<Bool, Error>) -> Void)? = nil) {
@@ -291,6 +255,30 @@ public class IOTAAccountManager {
             }
         }
     }
+    
+    /// Get the status of the Ledger Nano.
+    /// - Parameters:
+    ///   - onResult: Te status of the Ledger Nano
+    public func recoverAccounts(accountStartIndex: Int, accountGapLimit: Int, addressGapLimit: Int, syncOptions: SyncOptions?, onResult: ((Result<[Account], Error>) -> Void)? = nil) {
+        let payload: [String : Any?] = [
+            "accountStartIndex": accountStartIndex,
+            "accountGapLimit": accountGapLimit,
+            "addressGapLimit": addressGapLimit,
+            "syncOptions": syncOptions
+        ]
+        walletManager?.sendCommand(id: "RecoverAccounts",
+                                   cmd: "recoverAccounts",
+                                   payload: payload) { result, error in
+            if let status = WalletResponse<[Account]>.decode(result)?.payload {
+                onResult?(.success(status))
+            } else if let error = error {
+                onResult?(.failure(error))
+            } else {
+                onResult?(.failure(IOTAResponseError.decode(from: result ?? "")))
+            }
+        }
+    }
+
     
     /// Creates a new account.
     /// - Parameters:
