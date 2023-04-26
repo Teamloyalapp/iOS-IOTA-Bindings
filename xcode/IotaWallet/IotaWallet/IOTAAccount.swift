@@ -32,7 +32,7 @@ extension IOTAAccount {
     }
     
     public func getTransactions(onResult: ((Result<[Transaction], Error>) -> Void)?) {
-        callAccountMethod(GetTransactions(), onResult: onResult)
+        callAccountMethod(Transactions(), onResult: onResult)
     }
     
     public func getUnspentOutputs(options: UnspentOutputs, onResult: ((Result<[OutputData], Error>) -> Void)?) {
@@ -180,16 +180,22 @@ extension IOTAAccount {
     
     private func callAccountMethod<T: Decodable>(_ method: AccountMethod, onResult: ((Result<T, Error>) -> Void)?) {
         let methodName = String(describing: type(of: method))
+        let data = method.dictionary ?? [:]
+        var methodPatload: [String:Any] = [
+            "name": methodName.prefix(1).lowercased() + methodName.dropFirst(),
+            "data": data
+        ]
+        if data.isEmpty {
+            methodPatload["data"] = nil
+        }
+        var payload: [String:Any] = [
+            "accountId": self.id,
+            "method": methodPatload
+        ]
         accountManager?.walletManager?.sendCommand(
             id: methodName,
             cmd: "callAccountMethod",
-            payload: [
-                "accountId": self.id,
-                "method": [
-                    "name": methodName.prefix(1).lowercased() + methodName.dropFirst(),
-                    "data": method.dictionary ?? [:]
-                ]
-            ],
+            payload: payload,
             callback: { result, error in
                 if let output = WalletResponse<T>.decode(result)?.payload {
                     onResult?(.success(output))

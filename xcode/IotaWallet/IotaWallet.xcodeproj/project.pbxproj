@@ -123,7 +123,7 @@
 		9AAAFFB329F8B01C009AA794 /* PrepareOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFF8D29F8B01C009AA794 /* PrepareOutput.swift */; };
 		9AAAFFB429F8B01C009AA794 /* SendOutputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFF8E29F8B01C009AA794 /* SendOutputs.swift */; };
 		9AAAFFB529F8B01C009AA794 /* GetFoundryOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFF8F29F8B01C009AA794 /* GetFoundryOutput.swift */; };
-		9AAAFFB629F8B01C009AA794 /* GetTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFF9029F8B01C009AA794 /* GetTransactions.swift */; };
+		9AAAFFB629F8B01C009AA794 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFF9029F8B01C009AA794 /* Transactions.swift */; };
 		9AAAFFB729F8B01C009AA794 /* UnspentOutputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFF9129F8B01C009AA794 /* UnspentOutputs.swift */; };
 		9AAAFFB829F8B01C009AA794 /* PrepareTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFF9229F8B01C009AA794 /* PrepareTransaction.swift */; };
 		9AAAFFB929F8B01C009AA794 /* SendNativeTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFF9329F8B01C009AA794 /* SendNativeTokens.swift */; };
@@ -304,7 +304,7 @@
 		9AAAFF8D29F8B01C009AA794 /* PrepareOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareOutput.swift; sourceTree = "<group>"; };
 		9AAAFF8E29F8B01C009AA794 /* SendOutputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendOutputs.swift; sourceTree = "<group>"; };
 		9AAAFF8F29F8B01C009AA794 /* GetFoundryOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetFoundryOutput.swift; sourceTree = "<group>"; };
-		9AAAFF9029F8B01C009AA794 /* GetTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTransactions.swift; sourceTree = "<group>"; };
+		9AAAFF9029F8B01C009AA794 /* Transactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		9AAAFF9129F8B01C009AA794 /* UnspentOutputs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnspentOutputs.swift; sourceTree = "<group>"; };
 		9AAAFF9229F8B01C009AA794 /* PrepareTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareTransaction.swift; sourceTree = "<group>"; };
 		9AAAFF9329F8B01C009AA794 /* SendNativeTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNativeTokens.swift; sourceTree = "<group>"; };
@@ -632,7 +632,7 @@
 				9AAAFF8D29F8B01C009AA794 /* PrepareOutput.swift */,
 				9AAAFF8E29F8B01C009AA794 /* SendOutputs.swift */,
 				9AAAFF8F29F8B01C009AA794 /* GetFoundryOutput.swift */,
-				9AAAFF9029F8B01C009AA794 /* GetTransactions.swift */,
+				9AAAFF9029F8B01C009AA794 /* Transactions.swift */,
 				9AAAFF9129F8B01C009AA794 /* UnspentOutputs.swift */,
 				9AAAFF9229F8B01C009AA794 /* PrepareTransaction.swift */,
 				9AAAFF9329F8B01C009AA794 /* SendNativeTokens.swift */,
@@ -894,7 +894,7 @@
 				9A562A0529E921920055B54A /* StateControllerAddressUnlockCondition.swift in Sources */,
 				9A562A4D29E921920055B54A /* AddressWithAmount.swift in Sources */,
 				9A562A1229E921920055B54A /* SenderFeature.swift in Sources */,
-				9AAAFFB629F8B01C009AA794 /* GetTransactions.swift in Sources */,
+				9AAAFFB629F8B01C009AA794 /* Transactions.swift in Sources */,
 				9A562A1329E921920055B54A /* MetadataFeature.swift in Sources */,
 				9A562A0D29E921920055B54A /* BaseCoinBalance.swift in Sources */,
 				9AAAFFBD29F8B01C009AA794 /* MinimumRequiredStorageDeposit.swift in Sources */,
