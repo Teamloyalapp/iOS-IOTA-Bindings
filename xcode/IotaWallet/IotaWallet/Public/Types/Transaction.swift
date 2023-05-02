@@ -2,13 +2,13 @@ import Foundation
 
 public struct Transaction: Codable {
     /// The transaction payload
-    var payload: TransactionPayload?
+    var payload: TransactionPayload
     /// BlockId when it got sent to the Tangle
     var blockId: String?
     /// Inclusion state of the transaction
     var inclusionState: InclusionState?
     /// Timestamp
-    var timestamp: String?
+    var timestamp: String
     /// Transaction ID
     var transactionId: String?
     /// Network id to ignore outputs when set_client_options is used to switch to another network

@@ -185,10 +185,10 @@ extension IOTAAccount {
             "name": methodName.prefix(1).lowercased() + methodName.dropFirst(),
             "data": data
         ]
-        if data.isEmpty {
+        if !method.hasData() {
             methodPatload["data"] = nil
         }
-        var payload: [String:Any] = [
+        let payload: [String:Any] = [
             "accountId": self.id,
             "method": methodPatload
         ]

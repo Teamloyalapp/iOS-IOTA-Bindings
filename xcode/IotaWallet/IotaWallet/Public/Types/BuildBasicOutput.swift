@@ -2,8 +2,8 @@ import Foundation
 
 // Build an BasicOutput.
 public struct BuildBasicOutput: AccountMethod, Codable {
-    var amount: String?
-    var nativeTokens: [NativeToken]?
-    var unlockConditions: [UnlockCondition]?
-    var features: [Feature]?
+    let amount: String
+    let nativeTokens: [NativeToken]
+    let unlockConditions: [UnlockCondition]
+    let features: [Feature]
 }
