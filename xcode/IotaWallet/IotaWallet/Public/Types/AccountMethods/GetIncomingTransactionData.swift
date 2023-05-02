@@ -1,5 +1,5 @@
 import Foundation
 
 public struct GetIncomingTransactionData: AccountMethod, Codable {
-    private let transactionId: TransactionId
+    let transactionId: String
 }

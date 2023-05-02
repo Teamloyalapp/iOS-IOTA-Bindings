@@ -1,7 +1,7 @@
 import Foundation
 
 public struct DecreaseNativeTokenSupply: AccountMethod, Codable {
-    let tokenId: TokenId
+    let tokenId: String
     let meltAmount: String
-    let options: TransactionOptions
+    let options: TransactionOptions?
 }

@@ -1,7 +1,7 @@
 import Foundation
 
 public struct BurnNativeToken: AccountMethod, Codable {
-    var tokenId: TokenId
+    var tokenId: String
     var burnAmount: String
-    var transactionOptions: TransactionOptions
+    var transactionOptions: TransactionOptions?
 }

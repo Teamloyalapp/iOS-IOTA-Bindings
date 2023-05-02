@@ -1,7 +1,7 @@
 import Foundation
 
 public struct RetryTransactionUntilIncluded: AccountMethod, Codable {
-    let transactionId: TransactionId
+    let transactionId: String
     let interval: Int
     let maxAttempts: Int
 }
