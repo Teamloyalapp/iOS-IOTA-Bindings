@@ -41,7 +41,7 @@ extension IOTAAccount {
     
     /// Returns the account's balance information object.
     /// - Parameter onResult: The balance response or error
-    public func getBalance(onResult: ((Result<BalanceResponse, Error>) -> Void)?) {
+    public func getBalance(onResult: ((Result<AccountBalance, Error>) -> Void)?) {
         callAccountMethod(GetBalance(), onResult: onResult)
     }
     

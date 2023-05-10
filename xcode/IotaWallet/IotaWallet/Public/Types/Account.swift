@@ -14,9 +14,9 @@ public struct Account: Codable {
     /// Addresses with unspent outputs.
     var addressesWithUnspentOutputs: [AddressWithUnspentOutputs]
     /// Outputs.
-   // var outputs: [OutputId : OutputData]
+   // var outputs: [String : OutputData]
     /// Unspent outputs that are currently used as input for transactions
-    var lockedOutputs: Set<OutputId>
+    var lockedOutputs: Set<String>
     /// Unspent outputs.
     //var unspentOutputs: [OutputData]
     /// Sent transactions.

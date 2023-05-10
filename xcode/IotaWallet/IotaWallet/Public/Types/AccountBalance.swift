@@ -8,12 +8,12 @@ public struct AccountBalance: Codable {
     /// Native tokens
     var nativeTokens: [NativeTokensBalance]
     /// Nfts
-    var nfts: [NftId]
+    var nfts: [String]
     /// Aliases
-    var aliases: [AliasId]
+    var aliases: [String]
     /// Foundries
-    var foundries: [FoundryId]
+    var foundries: [String]
     /// Outputs with multiple unlock conditions and if they can currently be spent or not. If there is a
     /// [`TimelockUnlockCondition`] or [`ExpirationUnlockCondition`] this can change at any time
-    var potentiallyLockedOutputs: [OutputId : Bool]    
+    var potentiallyLockedOutputs: [String : Bool]
 }

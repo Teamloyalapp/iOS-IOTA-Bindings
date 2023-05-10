@@ -395,7 +395,7 @@ public class IOTAWallet {
         }
     }
     
-    public func getBalance(alias: String, onResult: ((Result<BalanceResponse, Error>) -> Void)?) {
+    public func getBalance(alias: String, onResult: ((Result<AccountBalance, Error>) -> Void)?) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):

@@ -1,6 +1,6 @@
 import Foundation
 
 public struct MintTokenTransaction: Codable {
-    var tokenId: TokenId
+    var tokenId: String
     var transaction: Transaction?
 }

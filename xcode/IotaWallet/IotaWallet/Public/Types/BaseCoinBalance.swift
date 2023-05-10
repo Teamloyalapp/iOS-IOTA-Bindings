@@ -2,7 +2,7 @@ import Foundation
 
 public struct BaseCoinBalance: Codable {
     /// Total amount
-    var total: Int
+    var total: String
     /// Balance that can currently be spent
-    var available: Int
+    var available: String
 }

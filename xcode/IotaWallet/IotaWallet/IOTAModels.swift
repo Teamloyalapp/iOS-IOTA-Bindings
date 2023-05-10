@@ -131,24 +131,6 @@ public class IOTAAccount: Decodable {
     }
 }
 
-/// The Balance response.
-public struct BalanceResponse: Decodable {
-    
-    /// The total amount.
-    ///public let total: Int
-    
-    /// The available amount.
-    ///public let available: Int
-    
-    /// The incoming amount.
-    ///public let incoming: Int
-    
-    /// The outgoing amount.
-    ///public let outgoing: Int
-    
-    let nfts: [String]
-}
-
 /// The output kind associated to an `AddressOutput`.
 public enum OutputKind: String, Decodable {
     /// The `SignatureLockedSingle` output kind

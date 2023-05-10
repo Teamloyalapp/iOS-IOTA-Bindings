@@ -2,9 +2,9 @@ import Foundation
 
 public class NativeTokensBalance: Codable {
     /// Token id
-    let tokenId: TokenId
+    let tokenId: String
     /// Token foundry immutable metadata
-    let metadata: String
+    let metadata: String?
     /// Total amount
     let total: String
     /// Balance that can currently be spent

@@ -2,7 +2,7 @@ import Foundation
 
 public struct OutputData: Codable {
     /// The output id.
-    var outputId: OutputId?
+    var outputId: String?
     /// The metadata of the output.
     var metadata: OutputMetadata?
     /// The actual Output.

@@ -64,7 +64,6 @@
 		9A562A1E29E921920055B54A /* TokenId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C029E921920055B54A /* TokenId.swift */; };
 		9A562A1F29E921920055B54A /* FoundryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C129E921920055B54A /* FoundryId.swift */; };
 		9A562A2029E921920055B54A /* NftId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C229E921920055B54A /* NftId.swift */; };
-		9A562A2129E921920055B54A /* OutputId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C329E921920055B54A /* OutputId.swift */; };
 		9A562A2229E921920055B54A /* AbstractId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C429E921920055B54A /* AbstractId.swift */; };
 		9A562A2329E921920055B54A /* AccountAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C629E921920055B54A /* AccountAlias.swift */; };
 		9A562A2429E921920055B54A /* AccountIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C729E921920055B54A /* AccountIndex.swift */; };
@@ -246,7 +245,6 @@
 		9A5629C029E921920055B54A /* TokenId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenId.swift; sourceTree = "<group>"; };
 		9A5629C129E921920055B54A /* FoundryId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundryId.swift; sourceTree = "<group>"; };
 		9A5629C229E921920055B54A /* NftId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NftId.swift; sourceTree = "<group>"; };
-		9A5629C329E921920055B54A /* OutputId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputId.swift; sourceTree = "<group>"; };
 		9A5629C429E921920055B54A /* AbstractId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractId.swift; sourceTree = "<group>"; };
 		9A5629C629E921920055B54A /* AccountAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAlias.swift; sourceTree = "<group>"; };
 		9A5629C729E921920055B54A /* AccountIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountIndex.swift; sourceTree = "<group>"; };
@@ -539,7 +537,6 @@
 				9A5629C029E921920055B54A /* TokenId.swift */,
 				9A5629C129E921920055B54A /* FoundryId.swift */,
 				9A5629C229E921920055B54A /* NftId.swift */,
-				9A5629C329E921920055B54A /* OutputId.swift */,
 				9A5629C429E921920055B54A /* AbstractId.swift */,
 				9A5629C529E921920055B54A /* Account */,
 				9A5629C929E921920055B54A /* AliasId.swift */,
@@ -812,7 +809,6 @@
 				9A562A3729E921920055B54A /* NftOptions.swift in Sources */,
 				9AAAFFB529F8B01C009AA794 /* GetFoundryOutput.swift in Sources */,
 				9AAAFFBF29F8B01C009AA794 /* DestroyAlias.swift in Sources */,
-				9A562A2129E921920055B54A /* OutputId.swift in Sources */,
 				9AAAFFC829F8B01C009AA794 /* MintNfts.swift in Sources */,
 				9AAAFFB229F8B01C009AA794 /* ClaimOutputs.swift in Sources */,
 				9AAAFFD329F8B01C009AA794 /* BuildNftOutput.swift in Sources */,

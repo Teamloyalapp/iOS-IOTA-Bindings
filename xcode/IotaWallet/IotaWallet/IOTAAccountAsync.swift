@@ -38,7 +38,7 @@ extension IOTAAccount {
     
     /// Returns the account's balance information object.
     /// - Returns: The balance response or error
-    func balance() async -> Result<BalanceResponse, IOTAResponseError> {
+    func balance() async -> Result<AccountBalance, IOTAResponseError> {
         await withCheckedContinuation({ sself in
             balance { sself.resume(returning: $0) }
         })

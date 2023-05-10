@@ -8,7 +8,7 @@ public struct AddressWithUnspentOutputs: Codable {
     /// Determines if an address is a public or an internal (change) address.
     var isInternal: Bool
     /// Output ids.
-    var outputIds: [OutputId]
+    var outputIds: [String]
     
     enum CodingKeys: String, CodingKey {
         case address

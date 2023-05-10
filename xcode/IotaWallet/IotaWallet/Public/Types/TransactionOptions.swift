@@ -3,7 +3,7 @@ import Foundation
 public struct TransactionOptions: Codable {
     var remainderValueStrategy: RemainderValueStrategy = .ReuseAddress
     var taggedDataPayload: TaggedDataPayload?
-    var customInputs: [OutputId]
+    var customInputs: [String]
     var allowBurning: Bool?
     var note: String?
 }
