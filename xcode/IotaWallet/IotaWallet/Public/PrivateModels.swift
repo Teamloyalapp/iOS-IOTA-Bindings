@@ -17,6 +17,7 @@ struct WalletResponse<T: Decodable>: Decodable {
     let type: String
     let payload: T?
     var isError: Bool { type == "Error" }
+    var isOk: Bool { type == "ok" }
 }
 
 struct WalletGenericResponse: Decodable {
