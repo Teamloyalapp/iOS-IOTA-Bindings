@@ -197,8 +197,11 @@ extension IOTAAccount {
             cmd: "callAccountMethod",
             payload: payload,
             callback: { result, error in
-                if let output = WalletResponse<T>.decode(result)?.payload {
+                let data = WalletResponse<T>.decode(result)
+                if let output = data?.payload {
                     onResult?(.success(output))
+                } else if data?.isOk ?? false && T.self == Bool.self && data?.payload == nil {
+                    onResult?(.success(true as! T))
                 } else if let error = error {
                     onResult?(.failure(error))
                 } else {
