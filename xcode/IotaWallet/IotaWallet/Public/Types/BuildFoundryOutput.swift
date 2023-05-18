@@ -4,12 +4,12 @@ import Foundation
 public struct BuildFoundryOutput: AccountMethod, Codable {
     
     // If not provided, minimum storage deposit will be used
-    let amount: String
-    let nativeTokens: [NativeToken]
+    var amount: String?
+    var nativeTokens: [NativeToken]?
     let serialNumber: Int
     let tokenScheme: TokenScheme
-    let unlockConditions: [UnlockCondition]
-    let features: [Feature]
-    let immutableFeatures: [Feature]
+    var unlockConditions: [UnlockConditionWrapper]
+    var features: [Feature]?
+    var immutableFeatures: [Feature]?
     
 }

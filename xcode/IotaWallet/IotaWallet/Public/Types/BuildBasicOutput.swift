@@ -4,6 +4,6 @@ import Foundation
 public struct BuildBasicOutput: AccountMethod, Codable {
     let amount: String
     let nativeTokens: [NativeToken]
-    let unlockConditions: [UnlockCondition]
+    let unlockConditions: [UnlockConditionWrapper]
     let features: [Feature]
 }

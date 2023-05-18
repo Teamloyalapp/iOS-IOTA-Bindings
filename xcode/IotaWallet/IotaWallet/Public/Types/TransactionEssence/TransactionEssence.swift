@@ -1,5 +1,5 @@
 import Foundation
 
-class TransactionEssence: Codable {
-    var type: Int? 
+public class TransactionEssence: Codable {
+    var type: Int
 }

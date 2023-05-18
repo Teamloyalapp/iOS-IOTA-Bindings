@@ -6,11 +6,11 @@ public struct OutputData: Codable {
     /// The metadata of the output.
     var metadata: OutputMetadata?
     /// The actual Output.
-    var output: Output?
+    var output: OutputWrapper?
     /// If an output is spent.
     var isSpent: Bool?
     /// Associated account address.
-    var address: Address?
+    var address: AddressWrapper?
     /// Network ID.
     var networkId: String?
     /// Remainder.

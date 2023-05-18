@@ -16,13 +16,13 @@ struct IOTAError: Error {
 struct WalletResponse<T: Decodable>: Decodable {
     let type: String
     let payload: T?
-    var isError: Bool { type == "Error" }
+    var isError: Bool { type == "error" }
     var isOk: Bool { type == "ok" }
 }
 
 struct WalletGenericResponse: Decodable {
     let type: String
-    var isError: Bool { type == "Error" }
+    var isError: Bool { type == "error" }
 }
 
 struct WalletSyncResponse: Decodable {

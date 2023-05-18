@@ -1,6 +1,6 @@
 import Foundation
 
 public struct SendOutputs: AccountMethod, Codable {
-    let outputs: [Output]
+    let outputs: [OutputWrapper]
     let options: TransactionOptions?
 }

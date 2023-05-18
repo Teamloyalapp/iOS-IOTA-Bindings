@@ -1,5 +1,5 @@
 import Foundation
 
-class Payload: Codable {
+public class Payload: Codable {
     var type: Int?
 }

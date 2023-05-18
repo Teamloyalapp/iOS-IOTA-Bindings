@@ -1,5 +1,6 @@
 import Foundation
 
-class GovernorAddressUnlockCondition: UnlockCondition {
-   
+public struct GovernorAddressUnlockCondition: UnlockCondition {
+    public var type: Int = 5
+    let address: AddressWrapper
 }

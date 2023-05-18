@@ -1,5 +1,5 @@
 import Foundation
 
 public struct MinimumRequiredStorageDeposit: AccountMethod, Codable {
-    let output: Output
+    let output: OutputWrapper
 }

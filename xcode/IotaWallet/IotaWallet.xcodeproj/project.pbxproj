@@ -61,17 +61,9 @@
 		9A562A1B29E921920055B54A /* RequiredStorageDeposit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629BC29E921920055B54A /* RequiredStorageDeposit.swift */; };
 		9A562A1C29E921920055B54A /* FilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629BD29E921920055B54A /* FilterOptions.swift */; };
 		9A562A1D29E921920055B54A /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629BE29E921920055B54A /* Segment.swift */; };
-		9A562A1E29E921920055B54A /* TokenId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C029E921920055B54A /* TokenId.swift */; };
-		9A562A1F29E921920055B54A /* FoundryId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C129E921920055B54A /* FoundryId.swift */; };
-		9A562A2029E921920055B54A /* NftId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C229E921920055B54A /* NftId.swift */; };
-		9A562A2229E921920055B54A /* AbstractId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C429E921920055B54A /* AbstractId.swift */; };
 		9A562A2329E921920055B54A /* AccountAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C629E921920055B54A /* AccountAlias.swift */; };
 		9A562A2429E921920055B54A /* AccountIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C729E921920055B54A /* AccountIndex.swift */; };
 		9A562A2529E921920055B54A /* AccountIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C829E921920055B54A /* AccountIdentifier.swift */; };
-		9A562A2629E921920055B54A /* AliasId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629C929E921920055B54A /* AliasId.swift */; };
-		9A562A2729E921920055B54A /* BlockId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629CA29E921920055B54A /* BlockId.swift */; };
-		9A562A2829E921920055B54A /* MilestoneId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629CB29E921920055B54A /* MilestoneId.swift */; };
-		9A562A2929E921920055B54A /* TransactionId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629CC29E921920055B54A /* TransactionId.swift */; };
 		9A562A2A29E921920055B54A /* NodeAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629CD29E921920055B54A /* NodeAuth.swift */; };
 		9A562A2B29E921920055B54A /* TransactionOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629CE29E921920055B54A /* TransactionOptions.swift */; };
 		9A562A2C29E921920055B54A /* TransactionEssence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5629D029E921920055B54A /* TransactionEssence.swift */; };
@@ -160,6 +152,9 @@
 		9AAAFFDE29F8B09B009AA794 /* BuildAliasOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFFDB29F8B09A009AA794 /* BuildAliasOutput.swift */; };
 		9AAAFFDF29F8B09B009AA794 /* BuildBasicOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFFDC29F8B09A009AA794 /* BuildBasicOutput.swift */; };
 		9AAAFFE029F8B09B009AA794 /* BuildFoundryOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAFFDD29F8B09A009AA794 /* BuildFoundryOutput.swift */; };
+		9ACF5C272A1229C500207F3A /* RequestFundsFromFaucet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF5C262A1229C500207F3A /* RequestFundsFromFaucet.swift */; };
+		9ACF5C312A162FF000207F3A /* AliasOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF5C302A162FEF00207F3A /* AliasOutput.swift */; };
+		9ACF5C392A16311000207F3A /* RequestFundsFromFaucetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACF5C382A16311000207F3A /* RequestFundsFromFaucetData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,17 +237,9 @@
 		9A5629BC29E921920055B54A /* RequiredStorageDeposit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequiredStorageDeposit.swift; sourceTree = "<group>"; };
 		9A5629BD29E921920055B54A /* FilterOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOptions.swift; sourceTree = "<group>"; };
 		9A5629BE29E921920055B54A /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
-		9A5629C029E921920055B54A /* TokenId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenId.swift; sourceTree = "<group>"; };
-		9A5629C129E921920055B54A /* FoundryId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundryId.swift; sourceTree = "<group>"; };
-		9A5629C229E921920055B54A /* NftId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NftId.swift; sourceTree = "<group>"; };
-		9A5629C429E921920055B54A /* AbstractId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractId.swift; sourceTree = "<group>"; };
 		9A5629C629E921920055B54A /* AccountAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAlias.swift; sourceTree = "<group>"; };
 		9A5629C729E921920055B54A /* AccountIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountIndex.swift; sourceTree = "<group>"; };
 		9A5629C829E921920055B54A /* AccountIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountIdentifier.swift; sourceTree = "<group>"; };
-		9A5629C929E921920055B54A /* AliasId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliasId.swift; sourceTree = "<group>"; };
-		9A5629CA29E921920055B54A /* BlockId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockId.swift; sourceTree = "<group>"; };
-		9A5629CB29E921920055B54A /* MilestoneId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilestoneId.swift; sourceTree = "<group>"; };
-		9A5629CC29E921920055B54A /* TransactionId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionId.swift; sourceTree = "<group>"; };
 		9A5629CD29E921920055B54A /* NodeAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeAuth.swift; sourceTree = "<group>"; };
 		9A5629CE29E921920055B54A /* TransactionOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionOptions.swift; sourceTree = "<group>"; };
 		9A5629D029E921920055B54A /* TransactionEssence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionEssence.swift; sourceTree = "<group>"; };
@@ -340,6 +327,9 @@
 		9AAAFFDB29F8B09A009AA794 /* BuildAliasOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildAliasOutput.swift; sourceTree = "<group>"; };
 		9AAAFFDC29F8B09A009AA794 /* BuildBasicOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildBasicOutput.swift; sourceTree = "<group>"; };
 		9AAAFFDD29F8B09A009AA794 /* BuildFoundryOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildFoundryOutput.swift; sourceTree = "<group>"; };
+		9ACF5C262A1229C500207F3A /* RequestFundsFromFaucet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFundsFromFaucet.swift; sourceTree = "<group>"; };
+		9ACF5C302A162FEF00207F3A /* AliasOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliasOutput.swift; sourceTree = "<group>"; };
+		9ACF5C382A16311000207F3A /* RequestFundsFromFaucetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFundsFromFaucetData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,6 +478,7 @@
 				9AAAFFDB29F8B09A009AA794 /* BuildAliasOutput.swift */,
 				9AAAFFDC29F8B09A009AA794 /* BuildBasicOutput.swift */,
 				9AAAFFDD29F8B09A009AA794 /* BuildFoundryOutput.swift */,
+				9ACF5C382A16311000207F3A /* RequestFundsFromFaucetData.swift */,
 				9AAAFFD729F8B05A009AA794 /* AccountMethod.swift */,
 			);
 			path = Types;
@@ -534,15 +525,7 @@
 		9A5629BF29E921920055B54A /* Ids */ = {
 			isa = PBXGroup;
 			children = (
-				9A5629C029E921920055B54A /* TokenId.swift */,
-				9A5629C129E921920055B54A /* FoundryId.swift */,
-				9A5629C229E921920055B54A /* NftId.swift */,
-				9A5629C429E921920055B54A /* AbstractId.swift */,
 				9A5629C529E921920055B54A /* Account */,
-				9A5629C929E921920055B54A /* AliasId.swift */,
-				9A5629CA29E921920055B54A /* BlockId.swift */,
-				9A5629CB29E921920055B54A /* MilestoneId.swift */,
-				9A5629CC29E921920055B54A /* TransactionId.swift */,
 			);
 			path = Ids;
 			sourceTree = "<group>";
@@ -603,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				9A5629F029E921920055B54A /* BasicOutput.swift */,
+				9ACF5C302A162FEF00207F3A /* AliasOutput.swift */,
 				9A5629F129E921920055B54A /* Output.swift */,
 				9A5629F229E921920055B54A /* TreasuryOutput.swift */,
 				9A5629F329E921920055B54A /* NftOutput.swift */,
@@ -662,6 +646,7 @@
 				9AAAFFAE29F8B01C009AA794 /* AddressesWithUnspentOutputs.swift */,
 				9AAAFFAF29F8B01C009AA794 /* SubmitAndStoreTransaction.swift */,
 				9AAAFFB029F8B01C009AA794 /* GetOutput.swift */,
+				9ACF5C262A1229C500207F3A /* RequestFundsFromFaucet.swift */,
 			);
 			path = AccountMethods;
 			sourceTree = "<group>";
@@ -778,7 +763,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A562A2829E921920055B54A /* MilestoneId.swift in Sources */,
 				9A562A3A29E921920055B54A /* AddressAndNftId.swift in Sources */,
 				9A562A2B29E921920055B54A /* TransactionOptions.swift in Sources */,
 				9A562A3B29E921920055B54A /* NativeTokensBalance.swift in Sources */,
@@ -786,15 +770,16 @@
 				9A562A4729E921920055B54A /* Account.swift in Sources */,
 				9AAAFFBB29F8B01C009AA794 /* GenerateAddresses.swift in Sources */,
 				9A562A4329E921920055B54A /* MnemonicSecretManager.swift in Sources */,
+				9ACF5C272A1229C500207F3A /* RequestFundsFromFaucet.swift in Sources */,
 				9A562A1629E921920055B54A /* TransactionPayload.swift in Sources */,
 				9A562A1829E921920055B54A /* Payload.swift in Sources */,
 				9AAAFFCE29F8B01C009AA794 /* SyncAccount.swift in Sources */,
 				9A562A3929E921920055B54A /* OutputMetadata.swift in Sources */,
 				9A562A5129E921920055B54A /* Input.swift in Sources */,
-				9A562A1E29E921920055B54A /* TokenId.swift in Sources */,
 				9A562A2E29E921920055B54A /* TransactionInput.swift in Sources */,
 				9A562A4F29E921920055B54A /* UtxoInput.swift in Sources */,
 				9A785B9C29F2065E00A0D2BD /* NodeInfo.swift in Sources */,
+				9ACF5C392A16311000207F3A /* RequestFundsFromFaucetData.swift in Sources */,
 				9AAAFFCF29F8B01C009AA794 /* DestroyFoundry.swift in Sources */,
 				9A562A4129E921920055B54A /* StrongholdSecretOptions.swift in Sources */,
 				9AAAFFCC29F8B01C009AA794 /* SendAmount.swift in Sources */,
@@ -816,7 +801,6 @@
 				9AAAFFC229F8B01C009AA794 /* GetIncomingTransactionData.swift in Sources */,
 				9A562A4529E921920055B54A /* PreparedTransactionData.swift in Sources */,
 				9AAAFFC429F8B01C009AA794 /* Addresses.swift in Sources */,
-				9A562A2929E921920055B54A /* TransactionId.swift in Sources */,
 				9A562A3829E921920055B54A /* Transaction.swift in Sources */,
 				9AAAFFC129F8B01C009AA794 /* SignTransactionEssence.swift in Sources */,
 				9A562A2429E921920055B54A /* AccountIndex.swift in Sources */,
@@ -831,6 +815,7 @@
 				9A785BA229F2195E00A0D2BD /* BuildAliasOutput.swift in Sources */,
 				9A562A1029E921920055B54A /* TagFeature.swift in Sources */,
 				75114B4F29732900002A9336 /* Extensions.swift in Sources */,
+				9ACF5C312A162FF000207F3A /* AliasOutput.swift in Sources */,
 				9A562A2329E921920055B54A /* AccountAlias.swift in Sources */,
 				9AAAFFD129F8B01C009AA794 /* Outputs.swift in Sources */,
 				9A785BAB29F48B3900A0D2BD /* BuildBasicOutput.swift in Sources */,
@@ -848,7 +833,6 @@
 				9A562A3229E921920055B54A /* TokenScheme.swift in Sources */,
 				9A562A2D29E921920055B54A /* RegularTransactionEssence.swift in Sources */,
 				9A562A3529E921920055B54A /* Ed25519Address.swift in Sources */,
-				9A562A1F29E921920055B54A /* FoundryId.swift in Sources */,
 				9AAAFFD429F8B01C009AA794 /* AddressesWithUnspentOutputs.swift in Sources */,
 				9A562A4429E921920055B54A /* CoinType.swift in Sources */,
 				9A562A0A29E921920055B54A /* AddressUnlockCondition.swift in Sources */,
@@ -856,9 +840,7 @@
 				9AAAFFDA29F8B077009AA794 /* NodeInfo.swift in Sources */,
 				75114B4D2973277D002A9336 /* WalletEventsManager.swift in Sources */,
 				9A5629FC29E921920055B54A /* SyncOptions.swift in Sources */,
-				9A562A2029E921920055B54A /* NftId.swift in Sources */,
 				9A562A3029E921920055B54A /* RemainderData.swift in Sources */,
-				9A562A2729E921920055B54A /* BlockId.swift in Sources */,
 				9A562A3329E921920055B54A /* Address.swift in Sources */,
 				9A562A2529E921920055B54A /* AccountIdentifier.swift in Sources */,
 				9A562A4829E921920055B54A /* BasicOutput.swift in Sources */,
@@ -886,7 +868,6 @@
 				9A562A4629E921920055B54A /* AddressNativeTokens.swift in Sources */,
 				9AAAFFC329F8B01C009AA794 /* PendingTransactions.swift in Sources */,
 				75114B4B297323FD002A9336 /* IOTAAccountManager.swift in Sources */,
-				9A562A2629E921920055B54A /* AliasId.swift in Sources */,
 				9A562A0529E921920055B54A /* StateControllerAddressUnlockCondition.swift in Sources */,
 				9A562A4D29E921920055B54A /* AddressWithAmount.swift in Sources */,
 				9A562A1229E921920055B54A /* SenderFeature.swift in Sources */,
@@ -901,7 +882,6 @@
 				9A562A0929E921920055B54A /* ImmutableAliasAddressUnlockCondition.swift in Sources */,
 				9A562A3E29E921920055B54A /* PlaceholderSecretManager.swift in Sources */,
 				9A562A0F29E921920055B54A /* Feature.swift in Sources */,
-				9A562A2229E921920055B54A /* AbstractId.swift in Sources */,
 				75114B5D29732F9C002A9336 /* Utils.swift in Sources */,
 				9AAAFFCD29F8B01C009AA794 /* GetBalance.swift in Sources */,
 				9A562A3129E921920055B54A /* NativeTokenOptions.swift in Sources */,

@@ -1,5 +1,5 @@
 import Foundation
 
-class Input: Codable {
-    var type: Int?
+public class Input: Codable {
+    var type: Int
 }

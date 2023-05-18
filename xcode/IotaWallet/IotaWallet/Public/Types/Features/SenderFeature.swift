@@ -1,5 +1,5 @@
 import Foundation
 
 class SenderFeature: Feature {
-    var address: Address?
+    var address: AddressWrapper?
 }

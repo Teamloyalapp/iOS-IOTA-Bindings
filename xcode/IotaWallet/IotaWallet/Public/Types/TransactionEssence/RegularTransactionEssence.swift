@@ -1,6 +1,7 @@
 import Foundation
 
-class RegularTransactionEssence: TransactionEssence {
+public struct RegularTransactionEssence: Codable {
+    var type: Int?
     var networkId: String?
     var inputs: [TransactionInput]?
     var inputsCommitment: String?

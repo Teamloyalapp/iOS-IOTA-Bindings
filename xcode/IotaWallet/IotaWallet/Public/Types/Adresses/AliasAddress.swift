@@ -1,5 +1,6 @@
 import Foundation
 
-class AliasAddress: Address {
-    var aliasId: AliasId?
+public struct AliasAddress: Address {
+    public var type: Int = 8
+    let aliasId: String
 }

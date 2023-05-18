@@ -1,6 +1,6 @@
 import Foundation
 
 class UtxoInput: Input {
-    var transactionId: TransactionId?
+    var transactionId: String?
     var transactionOutputIndex: Int?
 }

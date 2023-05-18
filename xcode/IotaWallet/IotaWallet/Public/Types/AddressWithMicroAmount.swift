@@ -10,5 +10,5 @@ struct AddressWithMicroAmount: Codable {
     var returnAddress: String?
     /// Expiration in seconds, after which the output will be available for the sender again, if not spent by the
     /// receiver before. Default is 1 day
-    var expiration: Int
+    var expiration: Int?
 }

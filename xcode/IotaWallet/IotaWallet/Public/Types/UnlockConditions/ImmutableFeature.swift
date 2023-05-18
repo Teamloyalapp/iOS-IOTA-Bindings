@@ -3,7 +3,7 @@ import Foundation
 // MARK: - ImmutableFeature
 struct ImmutableFeature: Codable {
     let type: Int?
-    let address: Address?
+    let address: AddressWrapper?
     let data: String?
 }
 

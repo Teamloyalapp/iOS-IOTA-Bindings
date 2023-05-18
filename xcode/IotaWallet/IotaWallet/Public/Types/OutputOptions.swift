@@ -1,7 +1,7 @@
 import Foundation
 
 struct OutputOptions: Codable {
-    var recipientAddress: String?
+    var recipientAddress: String
     var amount: String
     var assets: Assets?
     var features: Features?

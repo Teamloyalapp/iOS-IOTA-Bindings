@@ -197,7 +197,7 @@ public class IOTAWallet {
         }
     }
     
-    public func buildAliasOutput(alias: String, options: BuildAliasOutput, onResult: ((Result<Output, Error>) -> Void)? = nil) {
+    public func buildAliasOutput(alias: String, options: BuildAliasOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)? = nil) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):
@@ -208,7 +208,7 @@ public class IOTAWallet {
         }
     }
     
-    public func buildBasicOutput(alias: String, options: BuildBasicOutput, onResult: ((Result<Output, Error>) -> Void)? = nil) {
+    public func buildBasicOutput(alias: String, options: BuildBasicOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)? = nil) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):
@@ -219,7 +219,18 @@ public class IOTAWallet {
         }
     }
     
-    public func buildFoundryOutput(alias: String, options: BuildFoundryOutput, onResult: ((Result<Output, Error>) -> Void)? = nil) {
+    public func requestFundsFromFaucet(alias: String, targetAddressBalance: String, options: RequestFundsFromFaucet, onResult: ((Result<Bool, Error>) -> Void)?) {
+        syncAccount(alias: alias) { result in
+            switch result {
+            case .success(let account):
+                account.requestFundsFromFaucet(options: options, targetAddressBalance: targetAddressBalance, onResult: onResult)
+            case .failure(let error):
+                onResult?(.failure(error))
+            }
+        }
+    }
+    
+    public func buildFoundryOutput(alias: String, options: BuildFoundryOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)? = nil) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):
@@ -230,7 +241,7 @@ public class IOTAWallet {
         }
     }
     
-    public func buildNftOutput(alias: String, options: BuildNftOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func buildNftOutput(alias: String, options: BuildNftOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):
@@ -307,7 +318,7 @@ public class IOTAWallet {
         }
     }
     
-    public func getFoundryOutput(alias: String, options: GetFoundryOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func getFoundryOutput(alias: String, options: GetFoundryOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):
@@ -318,7 +329,7 @@ public class IOTAWallet {
         }
     }
     
-    public func getOutputsWithAdditionalUnlockConditions(alias: String, options: GetOutputsWithAdditionalUnlockConditions, onResult: ((Result<[Output], Error>) -> Void)?) {
+    public func getOutputsWithAdditionalUnlockConditions(alias: String, options: GetOutputsWithAdditionalUnlockConditions, onResult: ((Result<[OutputWrapper], Error>) -> Void)?) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):
@@ -362,7 +373,7 @@ public class IOTAWallet {
         }
     }
     
-    public func minimumRequiredStorageDeposit(alias: String, options: MinimumRequiredStorageDeposit, onResult: ((Result<Transaction, Error>) -> Void)?) {
+    public func minimumRequiredStorageDeposit(alias: String, options: MinimumRequiredStorageDeposit, onResult: ((Result<String, Error>) -> Void)?) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):
@@ -406,7 +417,7 @@ public class IOTAWallet {
         }
     }
     
-    public func prepareOutput(alias: String, options: PrepareOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func prepareOutput(alias: String, options: PrepareOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):
@@ -428,7 +439,7 @@ public class IOTAWallet {
         }
     }
     
-    public func retryTransactionUntilIncluded(alias: String, options: RetryTransactionUntilIncluded, onResult: ((Result<BlockId, Error>) -> Void)?) {
+    public func retryTransactionUntilIncluded(alias: String, options: RetryTransactionUntilIncluded, onResult: ((Result<String, Error>) -> Void)?) {
         syncAccount(alias: alias) { result in
             switch result {
             case .success(let account):

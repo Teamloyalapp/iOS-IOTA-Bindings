@@ -1,5 +1,6 @@
 import Foundation
 
-class Ed25519Address: Address {
-    
+public struct Ed25519Address: Address {
+    public var type: Int = 0
+    public let pubKeyHash: String
 }

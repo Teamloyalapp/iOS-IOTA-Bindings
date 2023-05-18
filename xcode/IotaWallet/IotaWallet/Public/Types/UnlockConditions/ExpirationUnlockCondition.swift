@@ -1,6 +1,7 @@
 import Foundation
 
-class ExpirationUnlockCondition: UnlockCondition {
-    var returnAddress: Address?
-    var unixTime: Int?
+public struct ExpirationUnlockCondition: UnlockCondition {
+    public var type: Int = 3
+    let returnAddress: AddressWrapper
+    let unixTime: Int
 }

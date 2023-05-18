@@ -8,7 +8,6 @@ extension IOTAAccount {
         callAccountMethod(SyncAccount(), onResult: onResult)
     }
     
-    // TODO: check response
     /// Generates a new unused address and returns it.
     /// - Parameter onResult: The address or error
     public func generateAddresses(options: GenerateAddresses, onResult: ((Result<[IOTAAccount.Address], Error>) -> Void)?) {
@@ -57,19 +56,19 @@ extension IOTAAccount {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func buildAliasOutput(options: BuildAliasOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func buildAliasOutput(options: BuildAliasOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func buildBasicOutput(options: BuildBasicOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func buildBasicOutput(options: BuildBasicOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func buildFoundryOutput(options: BuildFoundryOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func buildFoundryOutput(options: BuildFoundryOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func buildNftOutput(options: BuildNftOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func buildNftOutput(options: BuildNftOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
@@ -97,11 +96,11 @@ extension IOTAAccount {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func getFoundryOutput(options: GetFoundryOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func getFoundryOutput(options: GetFoundryOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func getOutputsWithAdditionalUnlockConditions(options: GetOutputsWithAdditionalUnlockConditions, onResult: ((Result<[Output], Error>) -> Void)?) {
+    public func getOutputsWithAdditionalUnlockConditions(options: GetOutputsWithAdditionalUnlockConditions, onResult: ((Result<[OutputWrapper], Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
@@ -118,7 +117,7 @@ extension IOTAAccount {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func minimumRequiredStorageDeposit(options: MinimumRequiredStorageDeposit, onResult: ((Result<Transaction, Error>) -> Void)?) {
+    public func minimumRequiredStorageDeposit(options: MinimumRequiredStorageDeposit, onResult: ((Result<String, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
@@ -130,7 +129,7 @@ extension IOTAAccount {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func prepareOutput(options: PrepareOutput, onResult: ((Result<Output, Error>) -> Void)?) {
+    public func prepareOutput(options: PrepareOutput, onResult: ((Result<OutputWrapper, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
@@ -138,7 +137,7 @@ extension IOTAAccount {
         callAccountMethod(options, onResult: onResult)
     }
     
-    public func retryTransactionUntilIncluded(options: RetryTransactionUntilIncluded, onResult: ((Result<BlockId, Error>) -> Void)?) {
+    public func retryTransactionUntilIncluded(options: RetryTransactionUntilIncluded, onResult: ((Result<String, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
     }
     
@@ -176,6 +175,43 @@ extension IOTAAccount {
     
     public func createAliasOutput(options: CreateAliasOutput, onResult: ((Result<Transaction, Error>) -> Void)?) {
         callAccountMethod(options, onResult: onResult)
+    }
+    
+    public func requestFundsFromFaucet(options: RequestFundsFromFaucet, targetAddressBalance: String, onResult: ((Result<Bool, Error>) -> Void)?) {
+        sync { result in
+            switch result {
+            case .success(let account):
+                if account.baseCoin.available > targetAddressBalance {
+                    self.callAccountMethod(options) { (result: Result<String, Error>) in
+                        switch result {
+                        case .success(let data):
+                            guard RequestFundsFromFaucetData.decode(data) != nil else {
+                                onResult?(.failure(IOTAError.init(message: "No funds received from faucet")))
+                                return
+                            }
+                            self.sync { result in
+                                switch result {
+                                case .success(let acc):
+                                    if acc.baseCoin.available > targetAddressBalance {
+                                        onResult?(.success(true))
+                                    } else {
+                                        onResult?(.failure(IOTAError.init(message: "No funds received from faucet")))
+                                    }
+                                case .failure(let error):
+                                    onResult?(.failure(error))
+                                }
+                            }
+                        case .failure(let error):
+                            onResult?(.failure(error))
+                        }
+                    }
+                } else {
+                    onResult?(.failure(IOTAError.init(message: "No funds received from faucet")))
+                }
+            case .failure(let error):
+                onResult?(.failure(error))
+            }
+        }
     }
     
     private func callAccountMethod<T: Decodable>(_ method: AccountMethod, onResult: ((Result<T, Error>) -> Void)?) {

@@ -1,11 +1,12 @@
 import Foundation
 
-class BasicOutput: Output {
+public struct BasicOutput: Output {
+    public var type: Int = 3
     // Amount of IOTA tokens held by the output.
-    var amount: String?
+    let amount: String?
     // Native tokens held by the output.
-    var nativeTokens: [NativeToken] = []
+    let nativeTokens: [NativeToken]?
     // Native tokens held by the output.
-    var unlockConditions: [UnlockCondition] = []
-    var features: [Feature] = []
+    let unlockConditions: [UnlockConditionWrapper]?
+    let features: [Feature]?
 }

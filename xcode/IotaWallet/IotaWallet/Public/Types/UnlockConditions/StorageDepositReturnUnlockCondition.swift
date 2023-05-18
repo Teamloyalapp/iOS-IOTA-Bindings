@@ -1,7 +1,7 @@
 import Foundation
 
-struct StorageDepositReturnUnlockCondition: Codable {
-    var type: Int?
-  //  var returnAddress: Address?
-    var amount: String?
+public struct StorageDepositReturnUnlockCondition: UnlockCondition {
+    public var type: Int = 1
+    var returnAddress: AddressWrapper
+    var amount: String
 }

@@ -1,5 +1,6 @@
 import Foundation
 
-class TimelockUnlockCondition: UnlockCondition {
-    var unixTime: Int?
+public struct TimelockUnlockCondition: UnlockCondition {
+    public var type: Int = 2
+    var unixTime: Int
 }

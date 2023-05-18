@@ -1,6 +1,6 @@
 import Foundation
 
-struct StateControllerAddressUnlockCondition: Codable {
-    var type: Int?
-    var address: Address?
+public struct StateControllerAddressUnlockCondition: UnlockCondition {
+    public var type: Int = 4
+    let address: AddressWrapper
 }

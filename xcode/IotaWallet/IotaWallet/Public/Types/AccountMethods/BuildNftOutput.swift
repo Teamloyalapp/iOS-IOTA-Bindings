@@ -5,7 +5,7 @@ public struct BuildNftOutput: AccountMethod, Codable {
     var amount: String?
     var nativeTokens: [NativeToken]?
     var nftId: String
-    var unlockConditions: [UnlockCondition]?
+    var unlockConditions: [UnlockConditionWrapper]
     var features: [Feature]?
     var immutableFeatures: [Feature]?
 }

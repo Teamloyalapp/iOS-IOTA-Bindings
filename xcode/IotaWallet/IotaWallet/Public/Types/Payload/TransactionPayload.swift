@@ -1,19 +1,20 @@
 import Foundation
 
 // MARK: - TransactionPayload
-class TransactionPayload: Payload {
-    var essence: RegularTransactionEssence?
+public struct TransactionPayload: Codable { //Payload {
+    var type: Int
+    var essence: RegularTransactionEssence
     var unlocks: [Unlock]?
 }
 
 // MARK: - Unlock
-struct Unlock: Codable {
+public struct Unlock: Codable {
     let type: Int?
     let signature: Signature?
 }
 
 // MARK: - Signature
-struct Signature: Codable {
+public struct Signature: Codable {
     let type: Int?
     let publicKey, signature: String?
 }

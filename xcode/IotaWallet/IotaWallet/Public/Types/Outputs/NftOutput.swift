@@ -1,13 +1,14 @@
 import Foundation
 
-class NftOutput: Output {
+public struct NftOutput: Output {
+    public var type: Int = 6
     // Amount of IOTA tokens held by the output.
-    var amount: String?
+    var amount: String
     // Native tokens held by the output.
-    var nativeTokens: [NativeToken] = []
+    var nativeTokens: [NativeToken]?
     // Unique identifier of the NFT.
-    var nftId: NftId?
-    var unlockConditions: [UnlockCondition] = []
-    var features: [Feature] = []
-    var immutableFeatures: [Feature] = []
+    var nftId: String
+    var unlockConditions: [UnlockConditionWrapper]?
+    var features: [Feature]?
+    var immutableFeatures: [Feature]?
 }

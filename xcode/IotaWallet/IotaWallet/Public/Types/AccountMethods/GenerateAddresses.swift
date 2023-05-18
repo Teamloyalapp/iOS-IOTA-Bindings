@@ -2,7 +2,7 @@ import Foundation
 
 public struct GenerateAddresses: AccountMethod, Codable {
     let amount: Int
-    let options: AddressGenerationOptions
+    let options: AddressGenerationOptions?
 }
 
 public struct AddressGenerationOptions: AccountMethod, Codable {

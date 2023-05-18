@@ -1,13 +1,13 @@
 import Foundation
 
 struct OutputMetadata: Codable {
-    var blockId: BlockId?
-    var transactionId: TransactionId?
+    var blockId: String?
+    var transactionId: String?
     var outputIndex: Int?
     var isSpent: Bool?
     var milestoneIndexSpent: Int?
     var milestoneTimestampSpent: Int?
-    var transactionIdSpent: TransactionId?
+    var transactionIdSpent: String?
     var milestoneIndexBooked: Int?
     var milestoneTimestampBooked: Int?
     var ledgerIndex: Int?

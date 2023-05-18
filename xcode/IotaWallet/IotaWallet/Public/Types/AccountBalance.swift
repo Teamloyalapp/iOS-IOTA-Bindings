@@ -6,7 +6,7 @@ public struct AccountBalance: Codable {
     /// Current required storage deposit amount
     var requiredStorageDeposit: RequiredStorageDeposit?
     /// Native tokens
-    var nativeTokens: [NativeTokensBalance]
+    var nativeTokens: [NativeToken]
     /// Nfts
     var nfts: [String]
     /// Aliases
@@ -15,5 +15,5 @@ public struct AccountBalance: Codable {
     var foundries: [String]
     /// Outputs with multiple unlock conditions and if they can currently be spent or not. If there is a
     /// [`TimelockUnlockCondition`] or [`ExpirationUnlockCondition`] this can change at any time
-    var potentiallyLockedOutputs: [String : Bool]
+    var potentiallyLockedOutputs: [String : Bool]    
 }

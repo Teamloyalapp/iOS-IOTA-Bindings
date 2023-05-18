@@ -72,7 +72,7 @@ extension IOTAAccount {
 
     /// Returns the account's addresses.
     /// - Returns: The addresses or error
-    func addresses() async -> Result<[Address], IOTAResponseError> {
+    func addresses() async -> Result<[AddressWrapper], IOTAResponseError> {
         await withCheckedContinuation({ sself in
             addresses { sself.resume(returning: $0) }
         })
@@ -80,7 +80,7 @@ extension IOTAAccount {
     
     /// Return the account's unspent addresses
     /// - Returns: The list of addresses or error
-    func unspentAddresses() async -> Result<[Address], IOTAResponseError> {
+    func unspentAddresses() async -> Result<[AddressWrapper], IOTAResponseError> {
         await withCheckedContinuation({ sself in
             unspentAddresses { sself.resume(returning: $0) }
         })
@@ -88,7 +88,7 @@ extension IOTAAccount {
     
     /// Returns the account's spent addresses
     /// - Returns: The list of addresses or error
-    func spentAddresses() async -> Result<[Address], IOTAResponseError> {
+    func spentAddresses() async -> Result<[AddressWrapper], IOTAResponseError> {
         await withCheckedContinuation({ sself in
             spentAddresses { sself.resume(returning: $0) }
         })
@@ -96,7 +96,7 @@ extension IOTAAccount {
 
     /// Returns the account's unused addresses
     /// - Returns: The list of addresses or error
-    func unusedAddress() async -> Result<Address?, IOTAResponseError> {
+    func unusedAddress() async -> Result<AddressWrapper?, IOTAResponseError> {
         await withCheckedContinuation({ sself in
             unusedAddress { sself.resume(returning: $0) }
         })

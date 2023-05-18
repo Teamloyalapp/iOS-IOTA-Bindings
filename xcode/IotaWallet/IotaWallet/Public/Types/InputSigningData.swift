@@ -2,7 +2,7 @@ import Foundation
 
 struct InputSigningData: Codable {
     /// The output
-    var output: Output?
+    var output: OutputWrapper?
     /// The output metadata
     var outputMetadata: OutputMetadata?
     /// The chain derived from seed, only for ed25519 addresses
@@ -10,4 +10,5 @@ struct InputSigningData: Codable {
     var chain: [Segment]
     /// The bech32 encoded address, required because of alias outputs where we have multiple possible unlock
     /// conditions, because we otherwise don't know which one we need
+    var bech32Address: String
 }

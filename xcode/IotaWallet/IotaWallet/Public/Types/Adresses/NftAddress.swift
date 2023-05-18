@@ -1,5 +1,6 @@
 import Foundation
 
-class NftAddress: Address {
-    var nftId: NftId?
+public struct NftAddress: Address {
+    public var type: Int = 16
+    let nftId: String
 }

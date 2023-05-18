@@ -2,7 +2,7 @@ import Foundation
 
 public struct CreateAliasOutput: AccountMethod, Codable {
     var aliasOutputOptions: AliasOutputOptions = .init()
-    var options: TransactionOptions? = nil
+    var options: TransactionOptions?
 }
 
 public struct AliasOutputOptions: Codable {

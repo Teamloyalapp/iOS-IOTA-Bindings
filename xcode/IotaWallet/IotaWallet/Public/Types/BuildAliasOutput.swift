@@ -8,7 +8,7 @@ public struct BuildAliasOutput: AccountMethod, Codable {
     var stateIndex: Int?
     var stateMetadata: [UnsignedByte]?
     var foundryCounter: Int?
-    var unlockConditions: [UnlockCondition]
+    var unlockConditions: [UnlockConditionWrapper]
     var features: [Feature]?
     var immutableFeatures: [Feature]?
   

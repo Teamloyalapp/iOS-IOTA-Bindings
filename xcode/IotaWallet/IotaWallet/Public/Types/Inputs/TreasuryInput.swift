@@ -1,5 +1,5 @@
 import Foundation
 
-class TreasuryInput: Input {
-    var transactionId: MilestoneId?
+public class TreasuryInput: Input {
+    var transactionId: String?
 }

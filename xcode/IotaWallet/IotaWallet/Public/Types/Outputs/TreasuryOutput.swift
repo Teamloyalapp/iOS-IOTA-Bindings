@@ -1,5 +1,6 @@
 import Foundation
 
-class TreasuryOutput: Output {
-    var amount: String?
+public struct TreasuryOutput: Output {
+    public var type: Int = 2
+    let amount: String
 }
