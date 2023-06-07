@@ -1,4 +1,4 @@
-# IOTA Wallet Library – Swift binding
+# IOTA wallet.rs – Swift binding
 
 IOS IOTA Swift binding is a wrapper of [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/) that consists of 2 parts. The first part is written in Rust and includes the main methods for interacting with [IOTA Wallet Library](https://github.com/iotaledger/wallet.rs/), namely `iota_initialize`, `iota_destroy`, `iota_send_message`, `iota_listen`, `iota_init_logger`.
 The second part of the library is written in Objective-C and Swift. Similar methods are used in the library to interact with native part. Json message and callback are passed as parameters to receive a response from the native part of the library. 
@@ -43,7 +43,7 @@ Add compiled library to the project.
 ## Initialization
 
 Stronghold Secret Manager initialization:
-```
+``` Swift
 let manager = StrongholdSecretManager(
 	Stronghold: StrongholdSecretOptions(
 		password: …,
@@ -55,12 +55,12 @@ let manager = StrongholdSecretManager(
 
 IOTA Wallet object initialization:
 
-```
+``` Swift
 let wallet = IOTAWallet(storagePath: …, backupPath: …, secretManager: manager, coinType: .shimmer, nodeUrl: “https://api.shimmer.network”)
 ```
 
 Create IOTA Wallet if it doesn’t exist:
-```
+``` Swift
 wallet.createIOTAWallet(alias: …, onResult: { result in
                 switch result {
                 case .success(_):
@@ -75,14 +75,14 @@ wallet.createIOTAWallet(alias: …, onResult: { result in
 ```
 
 Otherwise, restore the wallet from the backup:
-```
+``` Swift
 wallet.restoreBackup(alias: …, onResult: { result in
 	// handle result
 })
 ```
 
 Get the list of account addresses:
-```
+``` Swift
 wallet.getAccountAddress(alias: …, onResult: { result in
                 switch result {
                 case .success(let data):
@@ -97,7 +97,7 @@ wallet.getAccountAddress(alias: …, onResult: { result in
 ```
 
 Get the list of account NFT IDs:
-```
+``` Swift
 wallet.getAccountListNftsIds(alias: …, onResult: { result in
                 switch result {
                 case .success(let data):
@@ -112,7 +112,7 @@ wallet.getAccountListNftsIds(alias: …, onResult: { result in
 ```
 
 Send the NFT specified by the ID to a specific receiver's address:
-```
+``` Swift
 wallet.sendNFT(alias: …, address: …, nftId: …, onResult: { result in
                 switch result {
                 case .success(let data):
